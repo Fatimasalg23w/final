@@ -15,6 +15,7 @@ function expressPlugin(): Plugin {
 }
 
 export default defineConfig(({ mode }) => ({
+  base: "/blog/",
   server: {
     host: "::",
     port: 8080,
@@ -28,9 +29,12 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: "dist/spa",
+    outDir: "dist",
   },
-  plugins: [react(), expressPlugin()],
+  plugins: [
+    react(),
+    mode === "development" ? expressPlugin() : null
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client"),
