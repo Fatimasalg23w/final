@@ -25,7 +25,7 @@ export default function ArticleDetail1({
     <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-4 border-gray-900"
+        className="bg-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border-4 border-gray-900 scrollbar-custom"
       >
         {/* Close Button */}
         <div className="sticky top-0 bg-white border-b-4 border-gray-900 px-6 py-4 flex items-center justify-between">
@@ -84,7 +84,7 @@ export default function ArticleDetail1({
           </div>
 
           {/* Article Content */}
-          <div className="prose prose-sm max-w-none">
+          <div className="prose prose-sm max-w-500">
             <p className="text-gray-900 leading-relaxed text-base whitespace-pre-wrap font-medium">
               {article.content}
             </p>

@@ -11,212 +11,89 @@ export interface Article1 {
 }
 
 export const articles1: Article1[] = [
-  {
-    id: "1",
-    title: "CASO DE EXITO:Reconstrucción desgasificadoras CFE",
-    excerpt:
-      "Se rehabilitan varias desgasificadoras de aceite para CFE",
-    content:
-      "Se rehabilitan varias purificadoras de aceite STOKES de los tipos 820-20 y 820-30 practicamente chatarra a valores de nuevas con rigidez final de 60 KV en el aceite.",
-    image:
-      "https://images.unsplash.com/photo-1573757056004-065ad36e2cf4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Departamento de mantenimiento",
-    date: "2025",
-    category: "Caso de éxito",
-    readTime: 1,
-  },
-  {
-    id: "2",
-    title: "Lubricantes Dranmak y la mejora de su producción en aceite dielectrico al 300%, gracias a nuestro servicio de desgasificado",
-    excerpt:
-      "Desgasificadora equipada, alcanza nuevos niveles de rigidez aumentando asi su producción...",
-    content:
-      "Gracias a una de nuestras desgasificadoras equipada de 5,000 LPH, esta industria alcanza nuevos niveles de rigidez permitiendole aumentar niveles de calidad en el producto de su lubricante de gran aceptacion entre sus clientes, por mas de 9 años",
-    image:
-      "https://images.unsplash.com/photo-1516937941344-00b4e0337589?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Departamento de filtradoras y desgasificadoras",
-    date: "2025",
-    category: "Caso de exito",
-    readTime: 1,
-  },
-  {
-    id: "3",
-    title: "Mejora de tiempo en secados de transformadores",
-    excerpt:
-      "Una guía para la reducción del tiempo en secado de transformadores, usando bombas de vacio de uso rudo ",
-    content:
-      "Para secados de transformadores de potencia de gran capacidad(+200 MVA), hemos ofrecido un sistema integrado por bomba de vacio de uso extremo rudo que apoya a un reforzador de lobulos, el cual a diferencia de los acostumbrados STOKES pueden ser arrancados a mayores presiciones disminuyendo el tiempo.",
-    image:
-      "https://images.unsplash.com/photo-1610891015188-5369212db097?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2129",
-    author: "Departamento de detección de fugas",
-    date: "2025",
-    category: "Especializada",
-    readTime: 7,
-  },
-  {
-    id: "4",
-    title: "Caso de éxito: Refineria dos bocas, localización de micro y nanofugas de aire y nitrogeno en intercambiadores",
-    excerpt:
-      "Descubre como nuestro equipo mejoro la hermetización de enormes intercambiadores gracias a la detección de micro/nanofugas, y como tu podrías hacer lo mismo",
-    content:
-      "El mantenimiento adecuado es crucial para garantizar la longevidad y eficiencia de los intercambiadores de calor. Nuestro equipo de trabajo tuvo la oportunidad de trabajar en refineria dos bocas, ya que habían problemas recurrentes con la hemerticidad de su intercambiadores, lo cual generaba perdida de gas y nitrogeno. Al paso de los años hemos tenido la oportunidad de poder detectar distintas fugas de gases y corregirlas para mejorar la productividad de distintas empresas, en el caso de refineria dos bocas nos pudimos dar cuenta de estas microfugas gracias a nuestro liquido detector de fugas,siendo uno de los primeros pasos para poder corregir el problema. Puedes encontrar a la venta este producto en nuestra empresa, solicita la cotización.",
-    image:
-      "https://images.unsplash.com/photo-1513828418004-7aa1c7e5c824?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1205",
-    author: "Departamento de mantenimiento",
-    date: "2025",
-    category: "Caso de exito",
-    readTime: 9,
-  },
-  {
-    id: "4",
-    title: "Secado total de intercambiadores de calor Refineria dos bocas",
-    excerpt: "Parte 2- Secado total de intercambiadores de calor en Refineria dos bocas",
-    content: "Como te mencionamos en el articulo localización de micro y nanofugas en intercambiadores para CFE, pudimos diagnosticar el problema en estos sistemas gracias a la deteccion de estas micro y nanofugas. En otros intercambiadores de esta refineria, ya se habían realizado pruebas con anterioridad, una de ellas fue por prueba hidrostatica. ¿Cúal es el problema con las pruebas hidrostaticas?,todo tanque que queda probado con agua en prueba hidrostatica, por norma oficial queda contaminado con residuos de esa agua, los cuales deben ser eliminados sin procesos dañinos. Con la aplicación de altos vacio y el proceso adecuado, logramos humedades finales del 0.3% en estos sistemas",
-    image: "https://images.unsplash.com/photo-1734104465183-094bd9398584?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1190",
-    author: "Departamento de mantenimiento",
-    date: "2025",
-    category: "Caso de éxito",
-    readTime: 9,
-  },
-  {
-    id: "5",
-    title: "Terminología del vacío: Terminología y equivalencias",
-    excerpt: "Diferencias entre vacío nanométrico y vacío absoluto. Presición y medición.",
-    content: `VACÍO NANOMÉTRICO: A nivel práctico, se puede entender como el vacío que se mide desde cero hasta el máximo alcanzado en un punto específico, por ejemplo, al nivel del mar. En ese contexto, se habla comúnmente de 30 pulgadas de mercurio o 700 Torr (milímetros de mercurio). La forma de expresar esta medida puede variar según la ciudad y su altitud, utilizando unidades como pulgadas, centímetros o milímetros de mercurio. Sin embargo, para obtener lecturas más precisas, se recurre a unidades como micrones (milésimas de milímetro) o pascales.
-
-VACÍO ABSOLUTO: Este concepto se refiere al estado en el que no existe presión alguna, es decir, no hay aire atmosférico ni ningún otro tipo de gas. En términos prácticos, se parte de una presión atmosférica estándar de 760 mmHg y se busca alcanzar el cero absoluto. A diferencia del vacío nanométrico, esta medición no depende de la altitud o ubicación geográfica, por lo que un mismo equipo dará la misma lectura tanto al nivel del mar como en la cima de una montaña.
-
-Precisión y medición: El vacío absoluto permite registrar únicamente la cantidad de aire o gases restantes, lo que lo convierte en una referencia ideal para evaluar el rendimiento de bombas o sistemas de vacío. Gracias a los instrumentos electrónicos adecuados, es posible medir con gran precisión en micrones o incluso fracciones de micrones, lo que facilita aplicaciones industriales que requieren altos estándares de control y confiabilidad.`,
-    image: "https://images.unsplash.com/photo-1656331797721-b593b8f00297?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=880",
-    author: "Consultora Ana Silva",
-    date: "8 de Noviembre, 2024",
-    category: "Aplicaciones",
-    readTime: 7,
-  }
+ {
+  "id": "1",
+  "title": "🔧 De chatarra a confiabilidad total: cómo rehabilitamos purificadoras STOKES para volverlas como nuevas, conoce el caso de éxito de CFE.",
+  "excerpt": "⚡ Este proyecto, realizado para una división de la Comisión Federal de Electricidad (CFE), demuestra que no siempre es necesario invertir en equipos nuevos para obtener resultados de alto nivel. Con una intervención adecuada, es posible recuperar equipos críticos y devolverles su valor operativo.",
+  "content": "🏭 En el sector energético, donde la continuidad operativa es crítica y los equipos deben rendir al máximo, la rehabilitación de activos puede marcar una gran diferencia. Este fue el caso de varias purificadoras de aceite STOKES, modelos 820-20 y 820-30, que llegaron a nuestras instalaciones en condiciones prácticamente inservibles.\n\n🛠️ Gracias a la experiencia de nuestro equipo técnico, estas unidades fueron completamente reconstruidas, alcanzando niveles de desempeño equivalentes a equipos nuevos. El resultado: una rigidez dieléctrica final de 60 kV en el aceite tratado, cumpliendo con los estándares más exigentes del sector.\n\n🔧 ¿Qué hicimos?\n- 🧰 Rehabilitación integral de sistemas mecánicos, eléctricos y de vacío\n- ⚙️ Sustitución y ajuste de componentes críticos\n- 🧪 Pruebas de desempeño y validación de calidad del aceite\n- 🚚 Entrega lista para operación en campo\n\n💡 ¿Por qué es relevante para tu empresa?\nEste proyecto demuestra que no siempre es necesario invertir en equipos nuevos para obtener resultados de alto nivel. Con una intervención adecuada, es posible:\n- 💰 Reducir costos operativos sin sacrificar calidad\n- 🔩 Extender la vida útil de equipos clave\n- 🌱 Apostar por la sostenibilidad, evitando el desecho prematuro de maquinaria\n- 📈 Mejorar la confiabilidad de procesos críticos como la purificación de aceite\n\n🤝 ¿Cómo podemos ayudarte?\nSi tu empresa cuenta con sistemas de vacío, purificadoras de aceite o equipos industriales que parecen haber llegado al final de su ciclo, podemos ayudarte a evaluarlos y devolverles su valor operativo. Nuestro enfoque no es solo técnico: es estratégico. Diseñamos soluciones a la medida, con acompañamiento desde el diagnóstico hasta la puesta en marcha. 📩 Solicita tu cotización hoy mismo.",
+  "image": "\Stokesreacondicionado.png",
+  "author": "Departamento de mantenimiento",
+  "date": "2025",
+  "category": "Caso de éxito",
+  "readTime": 6
+}
 ,
+ {
+  "id": "2",
+  "title": "🛢️ Lubricantes Dranmak y la mejora de su producción en aceite dieléctrico al 300%, gracias a nuestro servicio de desgasificado",
+  "excerpt": "🔬 Gracias a una de nuestras desgasificadoras industriales, equipada con capacidad de 5,000 litros por hora, esta empresa logró mejorar la rigidez dieléctrica del aceite tratado. ¿El resultado? Un incremento de hasta 300% en la eficiencia del proceso y una mejora notable en la calidad final del lubricante.",
+  "content": "🧪 En la industria de los lubricantes, la calidad no es negociable. Cada lote debe cumplir con estándares rigurosos de pureza, estabilidad y rendimiento. Por eso, cuando Lubricantes Dranmak buscaba elevar la eficiencia de su proceso de producción, recurrió a una solución que transformó por completo sus resultados: nuestro sistema de desgasificado de alto rendimiento.\n\n🔬 Tecnología que potencia la calidad\nGracias a una de nuestras desgasificadoras industriales, equipada con capacidad de 5,000 litros por hora, esta empresa logró mejorar la rigidez dieléctrica del aceite tratado, alcanzando niveles que antes parecían fuera de alcance. ¿El resultado? Un incremento de hasta 300% en la eficiencia del proceso y una mejora notable en la calidad final del lubricante, altamente valorado por sus clientes.\n\n📌 Beneficios del desgasificado\n- 💧 Eliminación de humedad y gases disueltos que afectan la estabilidad del aceite\n- ⚡ Mejora en la rigidez dieléctrica, clave para aplicaciones eléctricas y de alto voltaje\n- ✅ Mayor confiabilidad en el producto final, reduciendo rechazos y devoluciones\n- 📊 Optimización del proceso productivo, con menor desperdicio y mayor rendimiento\n\n⚙️ Soluciones a la medida\nNo solo proveemos equipos. Diseñamos soluciones integrales que se adaptan a las necesidades de cada cliente. Desde sistemas portátiles hasta líneas automatizadas, nuestras desgasificadoras están pensadas para integrarse fácilmente en entornos industriales exigentes.\n\n📣 ¿Tu empresa también produce lubricantes o aceites industriales?\nSi estás buscando mejorar la calidad, eficiencia y confiabilidad de tus productos, nuestros sistemas de vacío y desgasificado pueden ayudarte a dar el siguiente paso. 📩 Contáctanos para una evaluación personalizada y descubre cómo podemos transformar tu proceso productivo.",
+  "image": "\desgasificadora.png",
+  "author": "Departamento de filtradoras y desgasificadoras",
+  "date": "2025",
+  "category": "Caso de éxito",
+  "readTime": 6
+}
+,
+ {
+  "id": "3",
+  "title": "⚡ Secado eficiente en transformadores de gran capacidad",
+  "excerpt": "💨 En el mantenimiento de transformadores de potencia, especialmente aquellos que superan los 200 MVA, el proceso de secado representa una etapa crítica. Nuestro sistema de vacío de uso extremo permite iniciar el secado desde presiones más altas, reduciendo tiempos y elevando resultados.",
+  "content": "🔧 En el mantenimiento de transformadores de potencia, especialmente aquellos que superan los 200 MVA, el proceso de secado representa una etapa crítica. La eficiencia con la que se logra extraer humedad y gases internos no solo impacta en el tiempo de intervención, sino también en la confiabilidad operativa del equipo una vez reincorporado al sistema.\n\n🛠️ Para enfrentar este desafío, hemos desarrollado un sistema de vacío de uso extremo, diseñado específicamente para condiciones de alta exigencia. Este sistema integra una bomba de vacío robusta, capaz de operar en entornos industriales severos, junto con un reforzador de lóbulos que permite iniciar el proceso a presiones más elevadas que las que toleran los sistemas convencionales.\n\n🔍 ¿Qué lo hace diferente?\nA diferencia de los equipos tradicionales como los STOKES, que requieren alcanzar presiones bajas antes de arrancar, nuestro sistema puede activarse desde presiones más altas, lo que permite iniciar el secado de forma anticipada. Esta característica se traduce directamente en una reducción significativa del tiempo total de operación.\n\n📌 Beneficios técnicos:\n- 💧 Operación confiable en condiciones de alta humedad\n- 📉 Curva de vacío estable durante todo el proceso\n- 🔩 Menor desgaste gracias a su arquitectura de uso rudo\n- ⚙️ Adaptabilidad a transformadores de gran capacidad sin ajustes complejos\n\n⚙️ Potencia comprobada en campo\nNuestro sistema fue implementado con éxito en el secado de transformadores de más de 200 MVA, demostrando su capacidad para operar con alto desempeño en aplicaciones de gran escala. Esta potencia operativa no solo garantiza resultados más rápidos, sino también una extracción más profunda y confiable de humedad y gases disueltos.\n\n📈 ¿Qué beneficios obtiene el cliente?\n- ⏱️ Menor tiempo de secado, reduciendo costos y mejorando disponibilidad\n- ⚙️ Mayor confiabilidad en el vacío, con extracción más efectiva\n- 🔄 Flexibilidad operativa, iniciando el proceso en condiciones menos restrictivas\n- 🧩 Integración sencilla, adaptable a diferentes configuraciones\n\n📣 ¿Tu operación enfrenta retos similares?\nSi estás buscando una alternativa más eficiente para el secado de transformadores, nuestro sistema de vacío de uso extremo puede ser la respuesta. 📩 Solicita tu cotización hoy mismo.",
+  "image": "desgasificadoradeaceite.png",
+  "author": "Departamento de detección de fugas",
+  "date": "2025",
+  "category": "Especializada",
+  "readTime": 7
+} ,
+
   {
-    id: "7",
-    title: "Liofilizadoras en el area farmacéutica y alimentaria",
-    excerpt:
-      "Estrategias para optimizar el consumo energético de sistemas de vacío.",
-    content:
-      "Las bombas de vacío pueden consumir significativos recursos energéticos. Este artículo explora técnicas de optimización incluyendo velocidad variable, recuperación de calor, aislamiento térmico y selección de equipos de alta eficiencia. Aprende cómo reducir costos operativos sin comprometer el rendimiento.",
-    image:
-      "https://images.unsplash.com/photo-1669707040789-b39a52afb84c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Dr. Raúl Mendez",
-    date: "3 de Noviembre, 2024",
-    category: "Sostenibilidad",
-    readTime: 6,
-  },
-  {
-    id: "8",
-    title: "Metalizadoras, como funcionan y su función en la industria moderna.",
-    excerpt:
-      "Sensores y medidores para monitorear presión en sistemas de vacío.",
-    content:
-      "La medición precisa de presión es vital en cualquier aplicación de vacío. Exploramos diferentes tipos de sensores: manómetros Pirani, ionización, capacitivos y conductores. Cada uno tiene características únicas para diferentes rangos de presión. Aprende cómo seleccionar e instalar sensores para máxima precisión.",
-    image:
-      "https://images.unsplash.com/photo-1651505943305-3bd598916608?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
-    author: "Esp. Juliana Díaz",
-    date: "1 de Noviembre, 2024",
-    category: "Instrumentación",
-    readTime: 7,
-  },
-  {
-    id: "9",
-    title: "Caso de éxito: Optimizacion de producción en Refineria dos bocas con nuestros servicios",
-    excerpt:
-      "Identificar y prevenir fuentes de contaminación en líneas de vacío.",
-    content:
-      "La contaminación puede dañar el rendimiento de bombas y equipos conectados. Las fuentes comunes incluyen humedad, contaminantes químicos, partículas y fugas. Este artículo detalla métodos de prevención, sistemas de filtración efectivos y protocolos de purga para mantener sistemas limpios.",
-    image:
-      "https://images.unsplash.com/photo-1629540946404-ebe133e99f49?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1103",
-    author: "Químico Roberto Castro",
-    date: "28 de Octubre, 2024",
-    category: "Calidad",
-    readTime: 8,
-  },
-  {
-    id: "10",
-    title: "Sistemas de secado de transformador de potencia",
-    excerpt:
-      "Aplicaciones críticas de bombas de vacío en la industria de semiconductores.",
-    content:
-      "La manufactura de semiconductores depende completamente de sistemas de vacío de ultra-alta calidad. Desde depósitos de películas hasta grabado y litografía, exploraremos cómo las bombas de vacío son fundamentales. Analizamos requisitos específicos, desafíos y soluciones innovadoras en esta industria de alta demanda.",
-    image:
-      "https://images.unsplash.com/photo-1728808668131-76d40d112271?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=686",
-    author: "Ing. Patricia Núñez",
-    date: "25 de Octubre, 2024",
-    category: "Industria",
-    readTime: 9,
-  },
-  {
-    id: "11",
-    title: "Sobre Refrigeración y aire acondicionado",
-    excerpt:
-      "Protocolos de seguridad esencial para operadores de bombas de vacío.",
-    content:
-      "La operación segura es prioritaria al trabajar con sistemas de vacío. Cubrimos equipos de protección personal, procedimientos de operación segura, manejo de fugas, y respuesta ante emergencias. Este artículo proporciona un conjunto completo de directrices basadas en estándares internacionales.",
-    image:
-      "https://images.unsplash.com/photo-1574334292321-4844f63aefef?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Dir. Seguridad Juan Martín",
-    date: "22 de Octubre, 2024",
-    category: "Seguridad",
-    readTime: 7,
-  },
-  {
-    id: "12",
-    title: "¿Como puedo vender mi sistema de vacío usado o darlo a cuenta para uno nuevo?",
-    excerpt:
-      "Descubre los últimos avances y tendencias en bombas y sistemas de vacío.",
-    content:
-      "La tecnología de vacío continúa evolucionando con bombas más eficientes, sistemas inteligentes conectados y materiales innovadores. Exploramos desarrollos recientes en bombas magnéticas, control automatizado, y soluciones ecológicas. Conoce qué esperar en el futuro próximo de esta industria.",
-    image:
-      "https://images.unsplash.com/photo-1617203443096-6f53e130384b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Prof. Alicia Gómez",
-    date: "20 de Octubre, 2024",
-    category: "Innovación",
-    readTime: 6,
-  },
-  {
-    id: "13",
-    title: "Troubleshooting Común en Bombas de Vacío",
-    excerpt: "Solución rápida de problemas comunes en sistemas de vacío.",
-    content:
-      "Cuando algo falla, necesitas soluciones rápidas. Este artículo cubre problemas comunes como pérdida de presión, ruidos anormales, sobrecalentamiento y vibraciones. Para cada problema, proporcionamos causas probables y procedimientos de diagnóstico paso a paso.",
-    image:
-      "https://images.unsplash.com/photo-1581094488379-6a10d04c0f04?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
-    author: "Técnico Especializado Leonardo Soto",
-    date: "18 de Octubre, 2024",
-    category: "Soporte",
-    readTime: 8,
-  },
-  {
-    id: "14",
-    title: "Cálculo del Tamaño de Sistema de Vacío",
-    excerpt:
-      "Metodología para dimensionar correctamente sistemas de bombeo de vacío.",
-    content:
-      "Dimensionar correctamente un sistema es crítico para eficiencia. Cubrimos cálculos de velocidad requerida, factor de seguridad, tiempo de evacuación y selección de accesorios. Incluimos ejemplos prácticos y una hoja de cálculo para facilitar el diseño.",
-    image:
-      "https://plus.unsplash.com/premium_photo-1683141381544-390e29f842fb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1171",
-    author: "Calculista Marcos Díaz",
-    date: "15 de Octubre, 2024",
-    category: "Diseño",
-    readTime: 8,
-  },
-  {
-    id: "15",
-    title: "Sostenibilidad Ambiental en Sistemas de Vacío",
-    excerpt:
-      "Prácticas ecológicas y cumplimiento ambiental en operaciones de vacío.",
-    content:
-      "La industria de vacío enfrenta presión para reducir su huella ambiental. Exploraremos alternativas a refrigerantes contaminantes, reciclaje de aceites, emisiones reducidas y soluciones sostenibles. Aprende cómo tu operación puede ser ambientalmente responsable sin sacrificar eficiencia.",
-    image:
-      "https://images.unsplash.com/photo-1472313420546-a46e561861d8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1074",
-    author: "Ambientalista Verde Sofía Reyes",
-    date: "12 de Octubre, 2024",
-    category: "Sostenibilidad",
-    readTime: 7,
-  },
+  "id": "4",
+  "title": "🔍 Caso de éxito: Refinería Dos Bocas, localización de micro y nanofugas de aire y nitrógeno en intercambiadores",
+  "excerpt": "💡 Descubre cómo mejoramos la hermeticidad de enormes intercambiadores gracias a nuestro detector de fugas tipo burbuja líquido, y cómo tú podrías hacer lo mismo.",
+  "content": "🏭 En la fabricación de varios intercambiadores de calor para Refineria dos Bocas, uno de los mayores retos operativos se encontraba en la hermeticidad de sus intercambiadores de calor. A pesar de los esfuerzos de mantenimiento, persistían pérdidas de aire y nitrógeno que afectaban la eficiencia del sistema y generaban costos operativos significativos.\n\n🫧 Estas fugas, imperceptibles a simple vista, se manifestaban como micro y nanofugas: escapes diminutos que, con el tiempo, comprometían la presión interna y la seguridad del proceso.\n\n🧪 Nuestro equipo fue convocado para realizar un diagnóstico especializado. Gracias a nuestra experiencia en detección de fugas y al uso de un detector de fugas tipo burbuja líquido, desarrollado por nuestra propia compañía, logramos identificar puntos críticos de escape que habían pasado desapercibidos durante inspecciones anteriores.\n\n✅ Este producto es:\n- 🔥 No flamable\n- 🌱 No contaminante\n- ⚗️ No reactivo\n- 💥 No explosivo\n\nSu formulación segura lo hace ideal para entornos industriales exigentes, y su sensibilidad permite detectar incluso las fugas más pequeñas en sistemas presurizados.\n\n📈 Tras la detección y corrección de las fugas:\n- ✅ Se eliminó la pérdida constante de nitrógeno y aire\n- 📊 Se mejoró la presión operativa de los sistemas\n- 💸 Se redujeron los costos de reposición de gases\n- 🔒 Se incrementó la seguridad y confiabilidad del proceso\n\n🛒 El detector de fugas tipo burbuja líquido que utilizamos está disponible para venta directa. Es ideal para:\n- ♨️ Intercambiadores de calor\n- ⚡ Transformadores\n- 🧵 Tuberías\n- 🛢️ Tanques\n- 🌀 Sistemas de vacío\n- 🏗️ Equipos presurizados\n- 🔒 Cualquier proceso que requiera hermeticidad\n\n📩 Solicita tu cotización hoy mismo y lleva la precisión de nuestros diagnósticos a tu planta. Nuestro equipo está listo para ayudarte a mejorar la eficiencia, seguridad y confiabilidad de tus sistemas industriales.",
+  "image": "\localizaciondefugas.png",
+  "author": "Departamento de mantenimiento",
+  "date": "2025",
+  "category": "Caso de éxito",
+  "readTime": 8
+}
+,
+{
+  "id": "5",
+  "title": "💨 Secado total de intercambiadores de calor Refinería Dos Bocas",
+  "excerpt": "🧊 Secado técnico con alto vacío para eliminar humedad residual en intercambiadores de calor industriales.🏭 En la Refinería Dos Bocas, varios intercambiadores de calor habían sido sometidos previamente a pruebas hidrostáticas. Aunque este método es común para verificar la resistencia de los equipos, presenta una desventaja crítica",
+  "content": "🏭 En Tanques críogenicos para Refinería Dos Bocas, varios intercambiadores de calor habían sido sometidos previamente a pruebas hidrostáticas. Aunque este método es común para verificar la resistencia de los equipos, presenta una desventaja crítica:\n\n💧 Todo tanque que se prueba con agua bajo este método queda contaminado con residuos de humedad, los cuales deben eliminarse sin dañar el sistema.\n\n⚠️ Esta humedad residual puede comprometer la eficiencia térmica, acelerar la corrosión interna y afectar la confiabilidad operativa del equipo.\n\n🧪 Para resolver este problema, nuestro equipo aplicó un proceso especializado de secado utilizando altos niveles de vacío y protocolos técnicos diseñados para preservar la integridad de los sistemas.\n\n📉 Gracias a esta intervención, logramos reducir la humedad interna de los intercambiadores a niveles mínimos, alcanzando una humedad final del 0.3% sin recurrir a procesos agresivos ni contaminantes.\n📈 El secado total permitió:\n- 🛡️ Prevenir la corrosión interna por humedad residual\n- 📋 Cumplir con normativas oficiales de calidad\n- 💰 Proteger la inversión en equipos industriales de alto valor\n\n🔧 Este tipo de intervención es clave para mantener la confiabilidad operativa en ambientes industriales exigentes.\n\n📩 Nuestro equipo está listo para ayudarte a mejorar la eficiencia, seguridad y confiabilidad de tus sistemas industriales. Solicita tu cotización hoy mismo y descubre cómo podemos ayudarte a resolver problemas de humedad sin comprometer tus equipos.",
+  "image": "\secadodetransformador.png",
+  "author": "Departamento de mantenimiento",
+  "date": "2025",
+  "category": "Caso de éxito",
+  "readTime": 7
+}
+
+,
+ {
+  "id": "6",
+  "title": "💰 Cómo reducir costos recuperando tus sistemas de vacío industriales",
+  "excerpt": "🔧 A través de años de experiencia, hemos logrado reacondicionar sistemas de vacío con daños severos, recuperando componentes clave y evitando reemplazos costosos.",
+  "content": "🏭 En muchos entornos industriales, cuando un sistema de vacío falla o presenta daños severos, la primera reacción suele ser reemplazarlo. Sin embargo, esta decisión puede representar un gasto innecesario si el equipo aún tiene potencial de recuperación.\n\n🛠️ A lo largo de los años, hemos desarrollado la experiencia técnica necesaria para reacondicionar sistemas de vacío en condiciones críticas, logrando devolverles su funcionalidad y extender su vida útil.\n\n🔁 Regenerado de refacciones: una alternativa rentable\nMediante procesos especializados de regenerado, hemos logrado recuperar componentes clave que normalmente se considerarían perdidos:\n- ⚙️ Flechas\n- 🔄 Rotores\n- 🔧 Pistones\n- 🧲 Estatores\n\nEste enfoque permite ahorrar significativamente en refacciones nuevas, reducir tiempos de espera y evitar el desecho prematuro de maquinaria.\n\n⚙️ Beneficios del reacondicionamiento\n- 💸 Reducción de costos operativos al evitar compras innecesarias\n- 🔧 Extensión de la vida útil de equipos industriales\n- 🌱 Sostenibilidad al recuperar en lugar de desechar\n- 📈 Mayor confiabilidad en procesos críticos\n\n🔍 Cada sistema reacondicionado pasa por diagnóstico, reparación y validación técnica, garantizando resultados confiables en campo.\n\n📩 ¿Tu equipo merece una segunda oportunidad?\nSi cuentas con sistemas de vacío que parecen haber llegado al final de su ciclo, no los descartes todavía. Podemos ayudarte a evaluarlos y devolverles su valor operativo. Solicita tu cotización hoy mismo y descubre cómo podemos ayudarte a reducir costos y recuperar activos industriales valiosos.",
+  "image": "reconstrucciondesistemasdevacio.png",
+  "author": "Departamento de mantenimiento",
+  "date": "2025",
+  "category": "Especializada",
+  "readTime": 4
+}
+,
+ {
+  "id": "7",
+  "title": "❄️ Diagnóstico post-secado en tanque criogénico",
+  "excerpt": "📊 Resultados precisos tras intervención con vacío técnico. Validamos temperatura, diferencial térmico y rotación interna para garantizar condiciones óptimas de operación.",
+  "content": "🧊 Los tanques criogénicos requieren condiciones extremadamente controladas para operar con seguridad y eficiencia. Tras realizar un proceso de secado técnico con vacío, nuestro equipo procedió a validar el estado interno del sistema utilizando instrumentos de medición de alta precisión.\n\n📊 Resultados obtenidos tanto en tanque criogenico como tanques intercambiadores de calor\nLa imagen muestra los parámetros registrados directamente dentro del tanque, una vez finalizado el proceso de secado:\n 🔁 Humedad residual: <2%\n 💧 332 ppm de agua\n\nEstos valores indican que el sistema se encuentra en condiciones óptimas para operación, con una temperatura estable, bajo diferencial térmico y una rotación adecuada para mantener la presión y evitar condensación interna.\n\n🔍 ¿Por qué es importante medir después del secado?\n- ✅ Verifica que no haya humedad residual\n- 🧪 Confirma la estabilidad térmica del sistema\n- 🛡️ Garantiza la seguridad operativa en condiciones extremas\n- 📈 Asegura que el vacío aplicado fue efectivo y uniforme\n\nEste tipo de diagnóstico es clave para validar la calidad del proceso y evitar fallas en operación futura.\n\n📩 ¿Tu sistema criogénico necesita validación o secado?\nContamos con experiencia en secado técnico por vacío, diagnóstico post-intervención y recuperación de sistemas industriales en condiciones críticas. Solicita tu cotización hoy mismo y asegura la confiabilidad de tus equipos criogénicos con resultados medibles y comprobables.",
+  "image": "tanquescriogenicos.png",
+  "author": "Departamento de mantenimiento",
+  "date": "2025",
+  "category": "Especializada",
+  "readTime": 6
+}
+,
 ];

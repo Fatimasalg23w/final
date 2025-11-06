@@ -64,11 +64,11 @@ const Blog = () => {
                 <p className="text-muted-foreground mb-4 line-clamp-3">
                   {article.content}
                 </p>
-                <a href="http://localhost:8082"
+                <a href="http://localhost:8000/blog"
                 target="_blank"
                 rel="noopener noreferrer"
                  className="inline-flex items-center text-primary hover:underline group">
-                  Leer más
+                 Ver historia
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </a>
               </CardContent>

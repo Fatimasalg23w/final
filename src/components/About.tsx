@@ -37,10 +37,10 @@ const About = () => {
               Nuestros años de experiencia nos avalan en el manejo de marcas como STOKES, KINNEY, ALCATEL, LEYBOLD, BT, VARIAN, PRECISION CIENTIFIC, WELCH, BALZERS-PFEIFFER, TUTHILL, SPENCER, EDWARDS, RIETSCHLE, ROOTS-DRESSER, ORION y más.
             </p>
             <p>
-              Podrás encontrar además servicios de secado al vacío, filtradoras y desgasificadoras de aceite, secado para tanques e intercambiadores de calor o cualquier otro por prueba hidrostática. Secado de transformadores al vacío, renta y venta de sistemas de vacío completos y accesorios. Detectores de fugas, rehabilitación de partes dañadas y más.
+              Aqui podrán encontrar además servicios de secado al vacío, filtradoras y desgasificadoras de aceite, secado para tanques e intercambiadores de calor o cualquier otro por prueba hidrostática o cualquier otro con remanentes de humedad por prueba hidrostaticaa;secado de transformadores al vacío,  venta de sistemas de vacío completos y accesorios. Detectores de fugas, rehabilitación de partes dañadas y más.
             </p>
             <p className="text-primary font-semibold text-xl">
-             Hemos ayudado a nuestros clientes a aumentar su producción hasta en un 300% mediante la implementación de nuestras soluciones de vacío, tu podrías ser el siguiente.
+             Hemos apoyado a nuestros clientes a aumentar su producción hasta en un 300% mediante la implementación de nuestras soluciones de vacío, permitenos ayudarte en el proceso para que tu empresa sea la siguiente.
             </p>
           </div>
         </div>

@@ -1,6 +1,16 @@
 export default function BlogHeader1() {
   return (
     <div className="relative min-h-[60vh] flex flex-col justify-center text-white border-b-4 border-red-600 overflow-hidden">
+      {/* 🔙 Botón fijo en pantalla */}
+      <div className="fixed top-6 left-6 z-[999]">
+        <button
+          onClick={() => (window.location.href = "/")}
+          className="px-4 py-2 bg-red-600 text-white rounded shadow-lg hover:bg-red-700 transition font-semibold"
+        >
+          Volver al menú inicial
+        </button>
+      </div>
+
       {/* 🎥 Video de fondo */}
       <video
         autoPlay
@@ -21,29 +31,12 @@ export default function BlogHeader1() {
 
       {/* 🧠 Contenido */}
       <div className="relative z-50 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="max-w-3xl">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-red-500 font-black mb-3 leading-tight">
-  Bienvenido a nuestro blog
-</h1>
-
-          <p className="text-lg text-gray-100 mb-6 leading-relaxed font-semibold">
-            Aquí aprenderás todo sobre tecnología del vacío, aplicaciones de sistemas de vacío en la industria, artículos sobre reparación de bombas y sistemas de vacío, aplicación de vacío en tanques, casos de éxito con la implementación de nuestros productos y servicios. Guías de mantenimiento, detección de fugas y más.
-          </p>
-          <div className="flex items-center gap-2 text-gray-100">
-            <div className="flex -space-x-2">
-              <div className="w-7 h-7 rounded-full bg-red-400 flex items-center justify-center text-xs font-bold text-white border-2 border-gray-900">
-                I
-              </div>
-              <div className="w-7 h-7 rounded-full bg-red-500 flex items-center justify-center text-xs font-bold text-white border-2 border-gray-900">
-                T
-              </div>
-              <div className="w-7 h-7 rounded-full bg-red-600 flex items-center justify-center text-xs font-bold text-white border-2 border-gray-900">
-                V
-              </div>
-            </div>
-            <span className="text-sm font-bold">Expertos Técnicos</span>
-          </div>
-        </div>
+        <h1 className="text-4xl text-red-500 font-black mb-4">
+          Bienvenido a nuestro blog
+        </h1>
+        <p className="text-lg text-gray-100 mb-6 font-semibold">
+          Aquí aprenderás todo sobre tecnología del vacío, aplicaciones de sistemas de vacío en la industria, artículos sobre reparación de bombas y sistemas de vacío, aplicación de vacío en tanques, casos de éxito con la implementación de nuestros productos y servicios. Guías de mantenimiento, detección de fugas y más.
+        </p>
       </div>
     </div>
   );

@@ -68,10 +68,10 @@ const ClientsCarousel = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Ellos Confían</span> en Nosotros
+            <span className="text-gradient">Ellos Confiaron</span> en Nosotros
           </h2>
           <p className="text-xl text-muted-foreground">
-            Conoce nuestros clientes satisfechos que han mejorado su productividad
+            Conoce algunas de las empresas que hemos apoyado en  su desempeño.
           </p>
         </div>
 

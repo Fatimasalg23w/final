@@ -24,12 +24,13 @@ export default defineConfig(({ mode }) => ({
         path.resolve(__dirname),
         path.resolve(__dirname, "client"),
         path.resolve(__dirname, "shared"),
+        path.resolve(__dirname, "../src")
       ],
-      deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
-    },
+      deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"]
+    }
   },
   build: {
-    outDir: "dist",
+    outDir: "dist"
   },
   plugins: [
     react(),
@@ -39,6 +40,7 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "client"),
       "@shared": path.resolve(__dirname, "shared"),
-    },
-  },
+      "@src": path.resolve(__dirname, "../src")
+    }
+  }
 }));

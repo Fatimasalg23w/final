@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import VacuumPumps from "./pages/VacuumPumps";
 import NotFound from "./pages/NotFound";
 
+// ✅ Importa el CSS global
+import "./global.css";
+
 const queryClient = new QueryClient();
 
 export const App = () => (
@@ -13,13 +16,14 @@ export const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/blog">
         <Routes>
           <Route path="/" element={<VacuumPumps />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
+
+export default App;

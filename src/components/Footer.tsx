@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
+import { Facebook, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,32 +10,30 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-gradient mb-4">
-              Contactanos
+              Contáctanos
             </h3>
             <p className="text-muted-foreground mb-4">
               Contamos con +32 años de experiencia en sistemas de alto vacío, bombas industriales y soluciones de hermeticidad para la industria mexicana.
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/people/Servicios-y-Equipos-de-Vacio/61583523715639"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="#"
-                className="h-10 w-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/in/servicios-y-equipos-de-vacio-237a19395"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="mailto:serviciosyequiposdevacio@gmail.com"
                 className="h-10 w-10 rounded-full bg-card border border-border flex items-center justify-center hover:border-primary hover:text-primary transition-colors"
               >
                 <Mail className="h-5 w-5" />
@@ -59,7 +57,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="#bombas" className="text-muted-foreground hover:text-primary transition-colors">
-                  Bombas de vacio
+                  Bombas de vacío
                 </a>
               </li>
               <li>
@@ -72,11 +70,11 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="font-bold mb-4">Mas Servicios</h4>
+            <h4 className="font-bold mb-4">Más Servicios</h4>
             <ul className="space-y-2">
               <li>
                 <a href="#secado" className="text-muted-foreground hover:text-primary transition-colors">
-                  Secado al Vacio
+                  Secado al Vacío
                 </a>
               </li>
               <li>
@@ -101,7 +99,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border text-center text-muted-foreground">
           <p>
-            © {currentYear} Servicios y equipos de vacio. Todos los derechos reservados.
+            © {currentYear} Servicios y Equipos de Vacío. Todos los derechos reservados.
           </p>
         </div>
       </div>

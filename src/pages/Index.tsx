@@ -11,8 +11,11 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
+      {/* Primer fold: carga directa */}
       <Navbar />
       <Hero />
+
+      {/* Secciones cargadas directamente para depurar */}
       <About />
       <Stats />
       <Services />

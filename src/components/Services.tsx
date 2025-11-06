@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Gauge, Fan, Filter, Package } from "lucide-react";
+import { useEffect } from "react";
+
 import {
   Card,
   CardContent,
@@ -17,21 +19,32 @@ const Services = () => {
       description: "Soluciones integrales para sistemas de vacío industriales.",
       extraDescription:
         "Sistemas de vacío completos con accesorios como vacuómetros digitales, mangueras metálicas de 3, 4 y 6 pulgadas, válvulas reductoras, empaques compatibles con aceite dieléctrico y tornillería especializada.",
-      video: "https://www.pexels.com/es-es/download/video/12891228/",
-      features: [
-        "Venta de equipos nuevos y reconstruidos.",
-        "Reparación, reconstrucción y mantenimiento.",
-        "Remanufactura de partes dañadas (pistones, rotores, estatores, válvulas de media luna, etc.).",
-        "Sistemas personalizados según aplicación, refacciones y más.",
-      ],
+      video: "https://www.pexels.com/es-es/download/video/30243438/",
+      features:[
+  "🏗️ Venta de equipos nuevos y reconstruidos.",
+  "🛠️ Reparación, reconstrucción y mantenimiento.",
+  "🧱 Remanufactura de partes dañadas (pistones, rotores, estatores, válvulas de media luna, etc.).",
+  "⚙️ Sistemas personalizados según aplicación, refacciones y más."
+]
+,
+
       images: [
-        { src: "/bomba de paletas rotatorias.png", caption: "Bomba de paletas rotatorias" },
-        { src: "/bomba de vacio edwards.png", caption: "Bomba de vacío marca Edwards" },
-        { src: "/welch1397.png", caption: "Vista lateral de bomba industrial" },
-        { src: "/45KW.png", caption: "Sistema de vacío completo" },
-        { src: "/bomba71CFM.png", caption: "Detalle de válvulas y conexiones" },
-        { src: "/piezalimpia.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/piezasucia.png", caption: "Prueba de hermeticidad en transformador" },
+        { src: "desgasificadoradeaceite1.png", caption: "Sistema especial para secados rapidos en transformadores + 220 MVA" },
+        { src: "sistemadefiltracion.png", caption: "Vista-lateral-Sistema especial para secados rapidos en transformadores + 220 MVA" },
+        { src: "bombadepaletasrotatorias.png", caption: "Sistema de vacio especial para secado rapido." },
+        { src: "reparacionsistemasdevacio.png", caption: "Sistema STOKES- Bomba+Booster reacondicionado." },
+        { src: "sistemasdestruidos.png", caption: "Bomba+Booster STOKES antes de reacondicionamiento." },
+        { src: "bombasdevacio.png", caption: "Sistemas varios reacondicionados Bomba+Piston+Booster." },
+        { src: "bombasdevacioenoperacion.png", caption: "Prueba de medición de equipos reacondicionados." },
+        { src: "bombadevacioplanta.png", caption: "Bomba generica de pistón rotatorio reacondicionada." },
+        { src: "sistemadevacio.png", caption: "Kit completo de accesorios para secado de transformador." },
+        { src: "bombadevacioenfuncion.png", caption: "Sistema de alto vacio desgasificadora 5,000 LTS/HR." },
+        { src: "bombasellodeagua.png", caption: "Bomba de sello de agua." },
+        { src: "bombasdevacio1.png", caption: "Bomba de piston rotatorio 7.5 HP reacondicionada." },
+        { src: "STOKES820.png", caption: "Sistema de secado rapido en desgasificadora 9,0000 LTS/H" },
+        { src: "reparacionpiezasbombasdevacio.png", caption: "Reparacion total Boosters Stokes" },
+        { src: "reparacionrotor.png", caption: "Reparacion Boosters Varios" },
+        
       ],
     },
     {
@@ -42,19 +55,37 @@ const Services = () => {
         "Eliminación de gases como nitrógeno, oxígeno, monóxido y bióxido de carbono, humedad, sin que el aceite regenerado pierda sus propiedades.",
       extraDescription:
         "En un solo paso usted puede eliminar de 2,800 a 1 partícula entre 5–10 micrones. Conoce nuestros casos de éxito.",
-      video: "https://www.pexels.com/es-es/download/video/30243438/",
+      video: "https://www.pexels.com/download/video/30243438/",
       features: [
-        "Venta de equipos nuevos y reconstruidos, reconstrucción, mantenimiento y reparación de sistemas de tratamiento de aceite.",
-        "Servicio de filtrado y desgasificación en sus instalaciones.",
-        "Renta de equipos completos.",
-        "Aplicables para aceite de transformador, hidráulico, de corte, de engranes, de templado, mineral o sintético.",
-      ],
-      images: [
-        { src: "/desgasificadoradeaceite.png", caption: "Equipo de filtrado industrial" },
-        { src: "/tableroelectricodesgasificadora.png", caption: "Desgasificadora en operación" },
-        { src: "/tableroenmalestadodesgasificadora.png", caption: "Sistema portátil de filtrado" },
-        { src: "/tableroelectrico2.png", caption: "Sistema portátil de filtrado" },
-        { src: "/tableroelectrico3.png", caption: "Sistema portátil de filtrado" },
+  "🏭 Venta de equipos nuevos y reconstruidos, reconstrucción, mantenimiento y reparación de sistemas de tratamiento de aceite.",
+  "🧪 Servicio de filtrado y desgasificación en sus instalaciones.",
+  "🛢️ Aplicables para aceite de transformador, hidráulico, de corte, de engranes, de templado, mineral o sintético."
+]
+,
+     images: [
+        { src: "Desgasificadoradeaceite.png", caption: "Equipo de filtrado industrial- Equipo STOKES 420-20, totalmente reconstruido| CFE" },
+        { src: "Reconstrucciondesgasificadoras.png", caption: "Equipo de filtrado industrial CFE estado inicial- Camara Exterior." },
+        { src: "desgasificadoradeaceitesistema.png", caption: "Equipo de filtrado industrial CFE estado final- Camara Exterior." },
+        { src: "Reconstruccionfiltradora.png", caption: "Tablero electrico reconstruido para equipo de filtrado industrial- Interior." },
+        { src: "Sistemastokes.png", caption: "Tablero electrico: estado inicial de equipo de filtrado industrial- Interior." },
+        { src: "Stokes420.png", caption: "Tablero electrico de equipo reconstruido de filtrado industrial en funcionamiento- Exterior." },
+        { src: "sistemastokes420.png", caption: "Tablero electrico de equipo de filtrado industrial: Estado inicial- Exterior." },
+        { src: "filtradodeaceite.png", caption: "Parte trasera de sistema- Estado final del equipo de filtrado industrial." },
+        { src: "filtradoradeaceite.png", caption: "Parte trasera de sistema - Estado incial del equipo de filtrado industrial." },
+        { src: "filtradodeaceitesistema.png", caption: "Equipo recien Fabricado- Filtradora de aceite capacidad 4000LTS por hora." },
+        { src: "sistemadefiltradodeaceite.png", caption: "Equipo recien Fabricado por nuestros especialistas funcionando en planta." },
+        { src: "sistemadetratamientodeaceite.png", caption: "Filtradora de aceite 4000LTS/H- Vista Lateral." },
+        { src: "filtradora.png", caption: "Filtradora de aceite 4000LTS/H- en planta." },
+        { src: "reconstrucciondefiltradoras.png", caption: "Filtradora de aceite 4000LTS/H- Vista Frontal." },
+        { src: "desgasificadoradeaceitereconstruida.png", caption: "Sistema 4500 LTS/H equipo funcionando desde hace 9 años." },
+        { src: "reparaciondesgasificadora.png", caption: "Vista lateral-Sistema 4500 LTS/H equipo funcionando desde hace 9 años." },
+        { src: "filtradoradeaceiteenplanta.png", caption: "Sistema 4500 LTS/H en remolque." },
+        { src: "sistemadesgasificado.png", caption: "Transporte de Sistema 4500 LTS/H llegando a planta." },
+        { src: "sistemadesgasificadoenplanta.png", caption: "Sistema 4500 LTS/H maniobras en planta." },
+        { src: "reparacionbombasdevacio.png", caption: "Sistema 9,000 LTS/H estado inicial." },
+        { src: "desgasificadorareparacion.png", caption: "Sistema 9,000 LTS/H - en proceso de reconstrucción." },
+        { src: "filtradora6000lts.png", caption: "Sistema 9,000 LTS/H - Terminado en remolque." },
+        { src: "reparacionfiltradora.png", caption: "Parte posterior de Sistema 9,000 LTS/H - Terminado en remolque con accesorios." },
       ],
     },
     {
@@ -65,20 +96,26 @@ const Services = () => {
         "Servicio de secado de tanques e intercambiadores de calor, secado de transformadores al vacío, renta de sistemas de vacío completos para secado de transformador.",
       extraDescription:
         "Sistemas de filtración con alta eficiencia para aceites dieléctricos, líquidos hidráulicos y transformadores, con accesorios modulares para fácil integración.",
-      video: "https://www.pexels.com/es-es/download/video/10058364/",
+      video: "https://www.pexels.com/download/video/10058364/",
       features: [
-        "Secado de tanques e intercambiadores de calor o cualquier otro con agua, por prueba hidrostática.",
-        "Secado de transformadores al vacío nuevos y reparados con equipos de menos de 100 micrones.",
-        "Renta de sistemas de vacío completos (bomba, vacuómetro, manguera metálica, válvulas para dieléctrico y tornillería) para secado de transformador.",
-        "Sistemas de filtración portátiles.",
-      ],
+  "💧 Secado de tanques e intercambiadores de calor o cualquier otro con agua, por prueba hidrostática.",
+  "⚡ Secado de transformadores al vacío nuevos y reparados con equipos de menos de 100 micrones.",
+  "🔄 Renta de sistemas de vacío completos (bomba, vacuómetro, manguera metálica, válvulas para dieléctrico y tornillería) para secado de transformador.",
+  "🧳 Sistemas de filtración portátiles."
+]
+,
       images: [
-        { src: "/desgasificadora.png", caption: "Transformador en proceso de secado" },
-        { src: "/secadotanques.png", caption: "Sistema de vacío aplicado a tanque" },
-        { src: "/tanques.png", caption: "Sistema de vacío aplicado a tanque" },
-        { src: "/tanquescriogenicos.png", caption: "Sistema de vacío aplicado a tanque" },
-        { src: "/secadotanques.png", caption: "Sistema de vacío aplicado a tanque" },
-        { src: "/secadoalvacio.png", caption: "Sistema de vacío aplicado a tanque" },
+        { src: "secadodetanquescriogenicos.png", caption: "Secado de Tanque Intercambiador de calor de 50 Toneladas |Usuario Final: Refineria Dos Bocas." },
+        { src: "secadodetanques.png", caption: "Maniobras en planta de fabricación- Intercambiador de calor para refineria." },
+        { src: "serviciosecadodetanques.png", caption: "Revisión de humedad alcanzada en intercambiador de refineria." },
+        { src: "tanquescontaminadosporpruebahidrostatica.png", caption: "Sistema de vacio secando tanque con humedad relativa final 2%" },
+        { src: "secadodetransformador.png", caption: "Aplicando vacio de aislamiento en espacio anular de tanques criogenicos de 80,000 LTS cada uno." },
+        { src: "serviciosecadodetransformador.png", caption: "Instalación de valvulas y manguera metalica para secado de transformador 30 MVA." },
+        { src: "serviciodesecadodetransformador.png", caption: "En proceso de secado de transformador de 20 MVA hasta 0.35% humedad relativa" },
+        { src: "secadoatransformador.png", caption: "Aplicación de vacio a tanques criogenicos de gran volumen a toda una planta criogenica."} ,
+         { src: "sistemadefiltracion.png", caption: "Sistema para secado de transformador de alta velocidad, autonomo, puede operar a alta presion- Vista lateral" },
+         { src: "desgasificadoradeaceite1.png", caption: "Sistema para secado de transformador de alta velocidad, autonomo, puede operar a alta presion- Vista frontal" },
+         { src: "sistemadevacio.png", caption: "Kit completo de accesorios para secado de transformador" },
       ],
     },
     {
@@ -89,163 +126,188 @@ const Services = () => {
         "Detectores de fuga líquidos, pruebas de hermeticidad de transformadores, reparación de desgasificadoras, repuestos y accesorios para equipos de vacío.",
       extraDescription:
         "Detección de fugas para varios gases tales como: gases refrigerantes, gas helio, por sniffing (dentro del tanque, cámara o tubería), por evacuación o vacío. Además contamos con detectores de fuga líquido de marca propia, probados en nuestros sistemas y servicios en otras instalaciones.",
-      video: "https://www.pexels.com/es-es/download/video/12891228/",
+      video: "https://www.pexels.com/download/video/4404095/",
       features: [
-        "Detectores de fuga líquidos.",
-        "Construcción de metalizadoras.",
-        "Construcción de liofilizadoras para la industria alimenticia y farmacéutica.",
-        "Precios accesibles, contratos flexibles y facilidades de pago. También aceptamos sistemas en mal estado a cuenta.",
-      ],
+  "🕵️‍♂️ Detectores de fuga líquidos.",
+  "🏗️ Construcción de metalizadoras.",
+  "⚗️ Construcción de liofilizadoras para la industria alimenticia y farmacéutica.",
+  "💸 Precios accesibles, contratos flexibles y facilidades de pago. También aceptamos sistemas en mal estado a cuenta."
+]
+,
       images: [
-        { src: "/metalizadoraproceso.png", caption: "Detector de fuga líquido en acción" },
-        { src: "/metalizadorapiezas.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/liofilizadora.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/piezasmetalizadas.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/detectordefuga.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/detectarfugas.png", caption: "Prueba de hermeticidad en transformador" },
-        { src: "/Liofilizadoradefruta.png", caption: "Prueba de hermeticidad en transformador" },
+        { src: "detectordefugas.png", caption: "Detector cazafugas liquido por burbuja: No explosivo, no reactivo, no contaminante, no flamable. | Para uso en: Transformadores, Tuberias, Tanques y todo proceso Hermetico" },
+        { src: "detecciondefugas.png", caption: "Prueba de hermeticidad- Uso de Detector cazafugas- Marca propia." },
+        { src: "localizarfugasensistema.png", caption: "Localización de fugas- Aplicacion de liquido cazafugas." },
+        { src: "liofilizadora.png", caption: "Liofilizadora piloto para muestras- Industrial alimenticia y farmaceutica- Diseño para pruebas alimenticias y medicas." },
+        { src: "liofilizadoradefruta.png", caption: "Liofilizadora comercial para volumenes medios de alimentos o medicamentos." },
+        { src: "localizaciondefugas.png", caption: "Detección de fugas, liquido cazafugas aplicado." },
+        { src: "microynanofugas.png", caption: "Resultado de prueba de hermeticidad-Detección de micro y nanofugas usando"}, 
     
       ],
     },
   ];
-
   const [zoomSrc, setZoomSrc] = useState<string | null>(null);
-  const [imageIndices, setImageIndices] = useState<number[]>(
-    Array(services.length).fill(0)
-  );
-   return (
-    <section className="py-0">
-      {services.map((service, index) => {
-        const currentImageIndex = imageIndices[index];
+const [imageIndices, setImageIndices] = useState<number[]>(
+  Array(services.length).fill(0)
+);
 
-        const handlePrev = () => {
-          const newIndices = [...imageIndices];
-          newIndices[index] =
-            (newIndices[index] - 1 + service.images.length) % service.images.length;
-          setImageIndices(newIndices);
-        };
+// ✅ Cierra el zoom al presionar Esc
+useEffect(() => {
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape") setZoomSrc(null);
+  };
+  window.addEventListener("keydown", handleKeyDown);
+  return () => window.removeEventListener("keydown", handleKeyDown);
+}, []);
 
-        const handleNext = () => {
-          const newIndices = [...imageIndices];
-          newIndices[index] = (newIndices[index] + 1) % service.images.length;
-          setImageIndices(newIndices);
-        };
-        return (
-  <div
-    key={service.id}
-    id={service.id}
-    className={`relative parallax-section min-h-screen flex flex-col justify-center ${
-      index % 2 === 0
-        ? "bg-background"
-        : "bg-black-to-b from-background to-card"
-    }`}
-  >
+return (
+  <section className="py-0">
     {zoomSrc && (
-      <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center">
-        <div className="relative w-[950px] h-[950px] bg-black rounded-lg flex items-center justify-center">
-          {/* Botón de cerrar */}
+      <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center">
+        <div className="relative max-w-[90vw] max-h-[90vh] bg-black rounded-lg flex items-center justify-center p-4">
           <button
             onClick={() => setZoomSrc(null)}
-            className="absolute top-4 right-4 text-white text-3xl font-bold bg-black/70 hover:bg-black/90 rounded-full w-10 h-10 flex items-center justify-center z-[60]"
-            aria-label="Cerrar"
+            className="absolute top-4 right-4 text-white text-3xl font-bold bg-red-600 hover:bg-red-700 border border-white rounded-full w-10 h-10 flex items-center justify-center z-[110] transition-colors"
+            aria-label="Cerrar imagen ampliada"
           >
             ×
           </button>
-
-          {/* Imagen ampliada */}
           <img
             src={zoomSrc}
-            alt="Zoom"
-            className="max-w-full max-h-full object-contain z-40"
+            alt="Imagen ampliada"
+            className="w-auto h-auto max-w-[100vw] max-h-[100vh] object-contain z-[105] rounded-lg shadow-lg"
+            loading="eager"
           />
         </div>
       </div>
     )}
+{services.map((service, index) => {
+  const currentImageIndex = imageIndices[index];
 
-       
-            <div className="absolute inset-0 z-0">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover opacity-90"
-              >
-                <source src={service.video} type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-black/80 z-10" />
-            </div>
+  const handlePrev = () => {
+    const newIndices = [...imageIndices];
+    newIndices[index] =
+      (newIndices[index] - 1 + service.images.length) % service.images.length;
+    setImageIndices(newIndices);
+  };
 
-            <div className="container mx-auto px-4 z-20 py-12">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-8 items-start">
-                <Card className="bg-black/20 backdrop-blur-sm border-primary/100">
-                  <CardHeader className="flex flex-col items-center gap-4">
-                    <CardTitle className="text-4xl text-primary text-center">
-                      Galería
-                    </CardTitle>
+  const handleNext = () => {
+    const newIndices = [...imageIndices];
+    const totalImages = service.images?.length || 0;
+    newIndices[index] = totalImages > 0
+      ? (newIndices[index] + 1) % totalImages
+      : 0;
+    setImageIndices(newIndices);
+  };
 
-                    <div className="flex items-center justify-center gap-9">
-                      <button
-                      onClick={handlePrev}
-                      className="text-gray-300 hover:text-gray-100 bg-gray-700/40 rounded-full p-2 transition">
-                         <span className="text-2xl font-bold">‹</span>
-                          </button>
+  return (
+    <div
+      key={service.id}
+      id={service.id}
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+    >
+      {/* 🎥 Video de fondo */}
+      {service.video && (
+        <video
+          src={service.video}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      )}
 
-  <img
-    src={service.images[currentImageIndex].src}
-    alt={`Imagen ${currentImageIndex + 1}`}
-    className="w-[400px] h-[400px] object-cover rounded-lg cursor-zoom-in"
-    onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
-  />
+      {/* 🧊 Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/75 z-10" />
 
-  <button
-    onClick={handleNext}
-    className="text-gray-300 hover:text-gray-100 bg-gray-700/40 rounded-full p-2 transition"
-  >
-    <span className="text-2xl font-bold">›</span>
-  </button>
-</div>
+      {/* 🧱 Contenido principal */}
+      <div className="container mx-auto px-4 z-20 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
+          {/* 🖼️ Galería sin tarjeta */}
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <h2 className="text-4xl text-[#ED213A] text-center">Galería</h2>
 
-               
+            {service.images.length > 0 && (
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  onClick={handlePrev}
+                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                  aria-label="Imagen anterior"
+                >
+                  <span className="text-2xl font-bold">‹</span>
+                </button>
 
-                    <p className="text-white italic text-sm text-center mt-2">
-                      {service.images[currentImageIndex].caption}
-                    </p>
-                  </CardHeader>
-                </Card>
+                <img
+                  src={service.images[currentImageIndex].src}
+                  alt={service.images[currentImageIndex].caption}
+                  loading="lazy"
+                  width={440}
+                  height={440}
+                  className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
+                  onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
+                />
 
-                {/* Tarjeta derecha: Información del servicio */}
-                <Card className="border-primary/100 bg-card/60 backdrop-blur-sm">
-                  <CardHeader className="text-center">
-                    <CardTitle className="text-sm md:text-5xl text-primary">
-                      {service.title}
-                    </CardTitle>
-                    <CardDescription className="text-xl text-muted-foreground mt-6">
-                      {service.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-5 mb-6 text-lg">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start">
-                          <div className="h-2 w-2 rounded-full bg-primary mt-3 mr-3 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      {service.extraDescription}
-                    </p>
-                  </CardContent>
-                </Card>
+                <button
+                  onClick={handleNext}
+                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                  aria-label="Imagen siguiente"
+                >
+                  <span className="text-2xl font-bold">›</span>
+                </button>
               </div>
-            </div>
+            )}
+
+            {service.images.length > 0 && (
+              <p className="italic text-xl text-center mt-0 text-white">
+                {service.images[currentImageIndex].caption}
+              </p>
+            )}
           </div>
-        );
-      })}
-    </section>
+{/* 📄 Tarjeta de texto compacta y limpia */}
+<Card className="mt-12 h-full max-h-[520px] bg-white/80 backdrop-blur-sm border-white/30 flex flex-col">
+  <CardHeader className="text-black space-y-2">
+    <h1 className="text-4xl font-bold text-[#ED213A] text-center lg:text-left">
+      {service.title}
+    </h1>
+    <h2 className="text-2xl font-semibold leading-snug">
+      {service.description}
+    </h2>
+    <h3 className="text-xl font-semibold">
+      Servicios disponibles
+    </h3>
+  </CardHeader>
+
+  <CardContent className="text-black pb-4">
+    <div className="space-y-1 text-base">
+      {service.features.map((feature, idx) => (
+        <div key={idx}>{feature}</div>
+      ))}
+    </div>
+
+    <div className="mt-3 space-y-1">
+      <h4 className="text-lg font-semibold">
+        Nota:
+      </h4>
+      <p className="text-[1rem] leading-relaxed">
+        {service.extraDescription}
+      </p>
+    </div>
+  </CardContent>
+</Card>
+
+        </div>
+      </div>
+    </div>
   );
-};
+})}
 
+
+
+
+  </section>
+  );
+}
+;
 export default Services;
-

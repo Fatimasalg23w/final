@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Becker from "@/assets/bomba de vacio becker.png";
@@ -22,6 +22,41 @@ const images = [
   Pfeiffer,
   Varian,
 ];
+
+const LazyVideo = () => {
+  const [visible, setVisible] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setVisible(true);
+    }, { threshold: 0.1 });
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={ref} className="absolute inset-0 z-0">
+      {visible && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
+        >
+          <source
+            src="https://www.pexels.com/download/video/30914505/"
+            type="video/mp4"
+          />
+        </video>
+      )}
+      <div className="absolute inset-0 bg-black/80 z-10" />
+    </div>
+  );
+};
 
 const Hero = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -48,18 +83,7 @@ const Hero = () => {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center parallax-section">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover opacity-90"
-        >
-          <source src="https://www.pexels.com/es-es/download/video/30914505/" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black/80 z-10" />
-      </div>
+      <LazyVideo />
 
       {/* Content */}
       <div className="container mx-auto px-6 z-20 text-center">

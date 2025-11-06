@@ -22,7 +22,7 @@ const Navbar = () => {
     { href: "#filtradoras", label: "Filtradoras y desgasificadoras", external: false },
     { href: "#secado", label: "Secado al vacío", external: false },
     { href: "#detectores", label: "Detectores de fuga y más", external: false },
-    { href: "http://localhost:8082/", label: "Blog", external: true }, // 👈 Enlace externo al blog
+    { href: "/blog", label: "Blog", external: true }, // 👈 Enlace externo al blog
     { href: "#contacto", label: "Contacto", external: false },
   ];
 

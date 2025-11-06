@@ -80,7 +80,7 @@ All colors MUST be HSL.
     @apply font-bold tracking-tight text-primary; /* Titles in black */
   }
 
-  h4,{
+  h4 {
     @apply font-bold tracking-tight text-primary; /* Titles in black */
   }
   h5,
