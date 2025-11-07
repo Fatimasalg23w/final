@@ -178,137 +178,137 @@ return (
             alt="Imagen ampliada"
             className="w-auto h-auto max-w-[100vw] max-h-[100vh] object-contain z-[105] rounded-lg shadow-lg"
             loading="eager"
+            width={800}
+            height={600}
           />
         </div>
       </div>
     )}
-{services.map((service, index) => {
-  const currentImageIndex = imageIndices[index];
 
-  const handlePrev = () => {
-    const newIndices = [...imageIndices];
-    newIndices[index] =
-      (newIndices[index] - 1 + service.images.length) % service.images.length;
-    setImageIndices(newIndices);
-  };
+    {services.map((service, index) => {
+      const currentImageIndex = imageIndices[index];
 
-  const handleNext = () => {
-    const newIndices = [...imageIndices];
-    const totalImages = service.images?.length || 0;
-    newIndices[index] = totalImages > 0
-      ? (newIndices[index] + 1) % totalImages
-      : 0;
-    setImageIndices(newIndices);
-  };
+      const handlePrev = () => {
+        const newIndices = [...imageIndices];
+        newIndices[index] =
+          (newIndices[index] - 1 + service.images.length) % service.images.length;
+        setImageIndices(newIndices);
+      };
 
-  return (
-    <div
-      key={service.id}
-      id={service.id}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-    >
-      {/* 🎥 Video de fondo */}
-      {service.video && (
-        <video
-          src={service.video}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="none"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
-      )}
+      const handleNext = () => {
+        const newIndices = [...imageIndices];
+        const totalImages = service.images?.length || 0;
+        newIndices[index] = totalImages > 0
+          ? (newIndices[index] + 1) % totalImages
+          : 0;
+        setImageIndices(newIndices);
+      };
 
-      {/* 🧊 Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/75 z-10" />
+      return (
+        <div
+          key={service.id}
+          id={service.id}
+          className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+        >
+          {/* 🎥 Video de fondo */}
+{service.video && (
+  <video
+    src={service.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    preload="none"
+    className="absolute inset-0 w-full h-full object-cover z-0"
+    aria-hidden="true"
+    tabIndex={-1}
+    title="Video de fondo ilustrativo"
+  />
+)}
 
-      {/* 🧱 Contenido principal */}
-      <div className="container mx-auto px-4 z-20 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
-          {/* 🖼️ Galería sin tarjeta */}
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <h2 className="text-4xl text-[#ED213A] text-center">Galería</h2>
 
-            {service.images.length > 0 && (
-              <div className="flex items-center justify-center gap-2">
-                <button
-                  onClick={handlePrev}
-                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
-                  aria-label="Imagen anterior"
-                >
-                  <span className="text-2xl font-bold">‹</span>
-                </button>
+          {/* 🧊 Overlay oscuro */}
+          <div className="absolute inset-0 bg-black/75 z-10" />
 
-                <img
-                  src={service.images[currentImageIndex].src}
-                  alt={service.images[currentImageIndex].caption}
-                  loading="lazy"
-                  width={440}
-                  height={440}
-                  className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
-                  onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
-                />
+          {/* 🧱 Contenido principal */}
+          <div className="container mx-auto px-4 z-20 py-6">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
+              {/* 🖼️ Galería sin tarjeta */}
+              <div className="flex flex-col items-center justify-center space-y-4">
+                <h2 className="text-4xl text-[#ED213A] text-center">Galería</h2>
 
-                <button
-                  onClick={handleNext}
-                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
-                  aria-label="Imagen siguiente"
-                >
-                  <span className="text-2xl font-bold">›</span>
-                </button>
+                {service.images.length > 0 && (
+                  <div className="flex items-center justify-center gap-2">
+                    <button
+                      onClick={handlePrev}
+                      className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                      aria-label="Imagen anterior"
+                    >
+                      <span className="text-2xl font-bold">‹</span>
+                    </button>
+
+                    <img
+                      src={service.images[currentImageIndex].src}
+                      alt={service.images[currentImageIndex].caption}
+                      loading="lazy"
+                      width={440}
+                      height={440}
+                      className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
+                      onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
+                    />
+
+                    <button
+                      onClick={handleNext}
+                      className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                      aria-label="Imagen siguiente"
+                    >
+                      <span className="text-2xl font-bold">›</span>
+                    </button>
+                  </div>
+                )}
+
+                {service.images.length > 0 && (
+                  <p className="italic text-xl text-center mt-0 text-white">
+                    {service.images[currentImageIndex].caption}
+                  </p>
+                )}
               </div>
-            )}
 
-            {service.images.length > 0 && (
-              <p className="italic text-xl text-center mt-0 text-white">
-                {service.images[currentImageIndex].caption}
-              </p>
-            )}
+              {/* 📄 Tarjeta de texto compacta y limpia */}
+              <Card className="mt-12 h-full max-h-[520px] bg-white/80 backdrop-blur-sm border-white/30 flex flex-col">
+                <CardHeader className="text-black space-y-2">
+                  <h1 className="text-4xl font-bold text-[#ED213A] text-center lg:text-left">
+                    {service.title}
+                  </h1>
+                  <h2 className="text-2xl font-semibold leading-snug">
+                    {service.description}
+                  </h2>
+                  <h3 className="text-xl font-semibold">
+                    Servicios disponibles
+                  </h3>
+                </CardHeader>
+
+                <CardContent className="text-black pb-4">
+                  <div className="space-y-1 text-base">
+                    {service.features.map((feature, idx) => (
+                      <div key={idx}>{feature}</div>
+                    ))}
+                  </div>
+
+                  <div className="mt-3 space-y-1">
+                    <h4 className="text-lg font-semibold">Nota:</h4>
+                    <p className="text-[1rem] leading-relaxed">
+                      {service.extraDescription}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
-{/* 📄 Tarjeta de texto compacta y limpia */}
-<Card className="mt-12 h-full max-h-[520px] bg-white/80 backdrop-blur-sm border-white/30 flex flex-col">
-  <CardHeader className="text-black space-y-2">
-    <h1 className="text-4xl font-bold text-[#ED213A] text-center lg:text-left">
-      {service.title}
-    </h1>
-    <h2 className="text-2xl font-semibold leading-snug">
-      {service.description}
-    </h2>
-    <h3 className="text-xl font-semibold">
-      Servicios disponibles
-    </h3>
-  </CardHeader>
-
-  <CardContent className="text-black pb-4">
-    <div className="space-y-1 text-base">
-      {service.features.map((feature, idx) => (
-        <div key={idx}>{feature}</div>
-      ))}
-    </div>
-
-    <div className="mt-3 space-y-1">
-      <h4 className="text-lg font-semibold">
-        Nota:
-      </h4>
-      <p className="text-[1rem] leading-relaxed">
-        {service.extraDescription}
-      </p>
-    </div>
-  </CardContent>
-</Card>
-
         </div>
-      </div>
-    </div>
-  );
-})}
-
-
-
-
+      );
+    })}
   </section>
-  );
-}
-;
+);    
+};
 export default Services;

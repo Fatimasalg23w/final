@@ -1,31 +1,36 @@
 import express from "express";
+// import compression from "compression"; // ❌ Desactivado temporalmente
 import path from "path";
 import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 8000;
 
-// ✅ Servir archivos públicos como /logo.png
-app.use(express.static(path.join(__dirname, "public")));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-// === Sitio principal en "/"
-const mainDist = path.join(__dirname, "dist");
-app.use(express.static(mainDist));
-app.get("/", (req, res) => {
-  res.sendFile(path.join(mainDist, "index.html"));
+// ✅ Desactivar caché completamente
+app.use((req, res, next) => {
+  res.setHeader("Cache-Control", "no-store");
+  res.setHeader("Pragma", "no-cache");
+  res.setHeader("Expires", "0");
+  next();
 });
 
-// === Blog en "/blog"
-const blogDist = path.join(__dirname, "vacioblog", "dist");
-app.use("/blog", express.static(blogDist));
-app.get(/^\/blog(\/.*)?$/, (req, res) => {
-  res.sendFile(path.join(blogDist, "index.html"));
+// ✅ Servir archivos estáticos desde dist/
+app.use(
+  express.static(path.join(__dirname, "dist"), {
+    maxAge: 0,
+    etag: false,
+    lastModified: false,
+  })
+);
+
+// ✅ Fallback para SPA compatible con Node.js v22+
+app.get(/^\/(?!assets\/|logo\.svg$).*/, (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.listen(PORT, () => {
-  console.log(`✅ Sitio principal: http://localhost:${PORT}`);
-  console.log(`✅ Blog: http://localhost:${PORT}/blog`);
+  console.log(`✅ Sitio corriendo en http://localhost:${PORT}`);
 });

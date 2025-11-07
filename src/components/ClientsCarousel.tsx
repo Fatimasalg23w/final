@@ -5,12 +5,12 @@ import {
 } from "@/components/ui/carousel";
 import { useState, useEffect, useRef } from "react";
 
-import IUSALOGO from "@/assets/IUSALOGO.png";
-import mitsubishi from "@/assets/mitsubishi.png"; // Corrected filename
-import MOTREC from "@/assets/MOTREC.png";
-import pemex from "@/assets/pemex.png";
-import tatsalogo from "@/assets/tatsalogo.png";
-import cfe from "@/assets/cfe.png";
+import IUSALOGO from "@/assets/IUSALOGO.webp";
+import mitsubishi from "@/assets/mitsubishi.webp"; // Corrected filename
+import MOTREC from "@/assets/MOTREC.webp";
+import pemex from "@/assets/pemex.webp";
+import tatsalogo from "@/assets/tatsalogo.webp";
+import cfe from "@/assets/cfe.webp";
 
 const ClientsCarousel = () => {
   const [logoImages, setLogoImages] = useState<string[]>([]);

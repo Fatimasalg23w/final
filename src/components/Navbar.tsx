@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -22,7 +21,7 @@ const Navbar = () => {
     { href: "#filtradoras", label: "Filtradoras y desgasificadoras", external: false },
     { href: "#secado", label: "Secado al vacío", external: false },
     { href: "#detectores", label: "Detectores de fuga y más", external: false },
-    { href: "/blog", label: "Blog", external: true }, // 👈 Enlace externo al blog
+    { href: "/blog", label: "Blog", external: true },
     { href: "#contacto", label: "Contacto", external: false },
   ];
 
@@ -47,17 +46,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-15">
           {/* Logo */}
-          <a
-            href="#inicio"
-            className="flex items-center space-x-2"
-            onClick={(e) => scrollToSection(e, "#inicio")}
-          >
-            <img
-              src={logo}
-              alt="Vacío y Hermeticidad Logo"
-              className="h-30 w-40"
-            />
-          </a>
+         <a
+  href="#inicio"
+  className="flex items-center space-x-2"
+  onClick={(e) => scrollToSection(e, "#inicio")}
+>
+  <div className="h-20 w-[140px] flex items-center justify-center overflow-hidden shrink-0">
+    <img
+      src="/logo.svg"
+      alt="Vacío y Hermeticidad Logo"
+      className="max-h-full max-w-full object-contain"
+    />
+  </div>
+</a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-3">

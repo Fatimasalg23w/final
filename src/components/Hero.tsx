@@ -1,15 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Becker from "@/assets/bomba de vacio becker.png";
-import Busch from "@/assets/bomba de vacio busch.png";
-import Edwards from "@/assets/bomba de vacio edwards.png";
-import Kinney from "@/assets/bomba de vacio kinney.png";
-import Leybold from "@/assets/bomba de vacio leybold.png";
-import Stokes from "@/assets/bomba de vacio stokes.png";
-import Alcatel from "@/assets/bomba de vacio alcatel.png";
-import Pfeiffer from "@/assets/bomba de vacio pfeiffer.png";
-import Varian from "@/assets/bomba de vacio varian.png";
+import Becker from "@/assets/bomba de vacio becker.webp";
+import Busch from "@/assets/bomba de vacio busch.webp";
+import Edwards from "@/assets/bomba de vacio edwards.webp";
+import Kinney from "@/assets/bomba de vacio kinney.webp";
+import Leybold from "@/assets/bomba de vacio leybold.webp";
+import Stokes from "@/assets/bomba de vacio stokes.webp";
+import Alcatel from "@/assets/bomba de vacio alcatel.webp";
+import Pfeiffer from "@/assets/bomba de vacio pfeiffer.webp";
+import Varian from "@/assets/bomba de vacio varian.webp";
 
 const images = [
   Becker,
