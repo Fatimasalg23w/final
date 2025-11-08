@@ -1,0 +1,60 @@
+vite v5.4.21 building for production...
+transforming...
+✓ 1732 modules transformed.
+Unused files:
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/vite-env.d.ts
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/hooks/use-mobile.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/ImageSlider.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/accordion.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/alert-dialog.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/alert.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/aspect-ratio.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/avatar.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/badge.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/breadcrumb.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/calendar.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/chart.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/checkbox.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/collapsible.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/command.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/context-menu.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/dialog.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/drawer.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/dropdown-menu.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/form.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/hover-card.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/input-otp.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/label.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/menubar.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/navigation-menu.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/pagination.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/popover.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/progress.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/radio-group.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/resizable.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/scroll-area.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/select.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/separator.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/sheet.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/sidebar.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/skeleton.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/slider.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/switch.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/table.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/tabs.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/toggle-group.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/toggle.tsx
+- /home/KALI/Downloads/paginavaciorender/paginafinalwebvacio/src/components/ui/use-toast.ts
+rendering chunks...
+computing gzip size...
+dist/index.html                       2.61 kB │ gzip:  1.06 kB
+dist/assets/cfe-CVMCY35O.webp         4.28 kB
+dist/assets/IUSALOGO-DQZ8Svci.webp    4.80 kB
+dist/assets/pemex-BjXoE44d.webp       4.91 kB
+dist/assets/index-Dl8X1Ptu.css       66.90 kB │ gzip: 11.79 kB
+dist/assets/lucide-DRPMMYsi.js        7.02 kB │ gzip:  1.88 kB
+dist/assets/query-v-GY3RqL.js        28.48 kB │ gzip:  8.89 kB
+dist/assets/radix-C0zt3WcB.js        57.47 kB │ gzip: 19.77 kB
+dist/assets/react-BEqLYuye.js       141.29 kB │ gzip: 45.44 kB
+dist/assets/index-HLjzWAOL.js       208.66 kB │ gzip: 91.78 kB
+✓ built in 5.82s

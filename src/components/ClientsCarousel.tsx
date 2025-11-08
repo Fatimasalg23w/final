@@ -6,10 +6,9 @@ import {
 import { useState, useEffect, useRef } from "react";
 
 import IUSALOGO from "@/assets/IUSALOGO.webp";
-import mitsubishi from "@/assets/mitsubishi.webp"; // Corrected filename
+import mitsubishi from "@/assets/mitsubishi.webp";
 import MOTREC from "@/assets/MOTREC.webp";
 import pemex from "@/assets/pemex.webp";
-import tatsalogo from "@/assets/tatsalogo.webp";
 import cfe from "@/assets/cfe.webp";
 
 const ClientsCarousel = () => {
@@ -17,38 +16,20 @@ const ClientsCarousel = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Use the logo image 7 times
-    const initialImages = [
-      cfe,
-      IUSALOGO,
-      mitsubishi,
-      MOTREC,
-      pemex,
-      tatsalogo,
-      cfe,
-      IUSALOGO,
-      mitsubishi,
-      MOTREC,
-      pemex,
-      tatsalogo,
-    ];
+    const initialImages = [cfe, IUSALOGO, mitsubishi, MOTREC, pemex];
     setLogoImages(initialImages);
   }, []);
 
   useEffect(() => {
     let animationFrameId: number;
     let start: number;
-    let currentTranslateX = 0; // Track the current translateX value
+    let currentTranslateX = 0;
 
     const step = (timestamp: number) => {
       if (!start) start = timestamp;
       const progress = timestamp - start;
-
-      // Adjust the speed by changing the divisor (larger = slower)
-      const speed = 0.1; // Adjust this value
-      currentTranslateX -= speed; // Increment the translateX value
-
-      // Calculate the translateX value based on the currentTranslateX
+      const speed = 0.1;
+      currentTranslateX -= speed;
       const translateX = currentTranslateX % 100;
 
       if (carouselRef.current) {
@@ -59,7 +40,6 @@ const ClientsCarousel = () => {
     };
 
     animationFrameId = requestAnimationFrame(step);
-
     return () => cancelAnimationFrame(animationFrameId);
   }, [logoImages]);
 
@@ -71,7 +51,7 @@ const ClientsCarousel = () => {
             <span className="text-gradient">Ellos Confiaron</span> en Nosotros
           </h2>
           <p className="text-xl text-muted-foreground">
-            Conoce algunas de las empresas que hemos apoyado en  su desempeño.
+            Conoce algunas de las empresas que hemos apoyado en su desempeño.
           </p>
         </div>
 
@@ -79,7 +59,7 @@ const ClientsCarousel = () => {
           <Carousel
             opts={{
               loop: true,
-              duration: 2000, // Adjust for desired speed
+              duration: 2000,
               drag: false,
             }}
             className="w-full"
@@ -112,3 +92,4 @@ const ClientsCarousel = () => {
 };
 
 export default ClientsCarousel;
+

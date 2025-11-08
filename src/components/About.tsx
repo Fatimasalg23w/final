@@ -1,22 +1,16 @@
 const About = () => {
   return (
     <section id="nosotros" className="py-24 relative overflow-hidden">
-      {/* Video de fondo */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-90"
-      >
-        <source src="https://www.pexels.com/es-es/download/video/5272700/" type="video/mp4" />
-      </video>
-
-      {/* Capa negra difuminada */}
-      <div className="absolute inset-0 bg-black/20 z-10" />
+      {/* Fondo Petrol */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "linear-gradient(to right, #BBD2C5, #536976, #292E49)",
+        }}
+      />
 
       {/* Gradiente adicional si lo deseas */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/90 z-20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/80 to-black/80 z-20" />
 
       {/* Contenido */}
       <div className="container mx-auto px-4 relative z-30">
@@ -37,10 +31,10 @@ const About = () => {
               Nuestros años de experiencia nos avalan en el manejo de marcas como STOKES, KINNEY, ALCATEL, LEYBOLD, BT, VARIAN, PRECISION CIENTIFIC, WELCH, BALZERS-PFEIFFER, TUTHILL, SPENCER, EDWARDS, RIETSCHLE, ROOTS-DRESSER, ORION y más.
             </p>
             <p>
-              Aqui podrán encontrar además servicios de secado al vacío, filtradoras y desgasificadoras de aceite, secado para tanques e intercambiadores de calor o cualquier otro por prueba hidrostática o cualquier otro con remanentes de humedad por prueba hidrostaticaa;secado de transformadores al vacío,  venta de sistemas de vacío completos y accesorios. Detectores de fugas, rehabilitación de partes dañadas y más.
+              Aquí podrán encontrar además servicios de secado al vacío, filtradoras y desgasificadoras de aceite, secado para tanques e intercambiadores de calor o cualquier otro por prueba hidrostática o cualquier otro con remanentes de humedad; secado de transformadores al vacío, venta de sistemas de vacío completos y accesorios. Detectores de fugas, rehabilitación de partes dañadas y más.
             </p>
             <p className="text-primary font-semibold text-xl">
-             Hemos apoyado a nuestros clientes a aumentar su producción hasta en un 300% mediante la implementación de nuestras soluciones de vacío, permitenos ayudarte en el proceso para que tu empresa sea la siguiente.
+              Hemos apoyado a nuestros clientes a aumentar su producción hasta en un 300% mediante la implementación de nuestras soluciones de vacío. Permítenos ayudarte en el proceso para que tu empresa sea la siguiente.
             </p>
           </div>
         </div>

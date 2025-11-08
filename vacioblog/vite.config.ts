@@ -15,7 +15,7 @@ function expressPlugin(): Plugin {
 }
 
 export default defineConfig(({ mode }) => ({
-  base: "/blog/",
+  base: "./", // ✅ Rutas relativas para servir desde /blog sin errores
   server: {
     host: "::",
     port: 8080,

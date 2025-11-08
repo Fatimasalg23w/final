@@ -6,22 +6,8 @@ import Busch from "@/assets/bomba de vacio busch.webp";
 import Edwards from "@/assets/bomba de vacio edwards.webp";
 import Kinney from "@/assets/bomba de vacio kinney.webp";
 import Leybold from "@/assets/bomba de vacio leybold.webp";
-import Stokes from "@/assets/bomba de vacio stokes.webp";
-import Alcatel from "@/assets/bomba de vacio alcatel.webp";
-import Pfeiffer from "@/assets/bomba de vacio pfeiffer.webp";
-import Varian from "@/assets/bomba de vacio varian.webp";
 
-const images = [
-  Becker,
-  Busch,
-  Edwards,
-  Kinney,
-  Leybold,
-  Stokes,
-  Alcatel,
-  Pfeiffer,
-  Varian,
-];
+const images = [Becker, Busch, Edwards, Kinney, Leybold];
 
 const LazyVideo = () => {
   const [visible, setVisible] = useState(false);
@@ -47,10 +33,7 @@ const LazyVideo = () => {
           preload="auto"
           className="absolute inset-0 w-full h-full object-cover opacity-90"
         >
-          <source
-            src="https://www.pexels.com/download/video/30914505/"
-            type="video/mp4"
-          />
+          <source src="/videos/video1-final.mp4" type="video/mp4" />
         </video>
       )}
       <div className="absolute inset-0 bg-black/80 z-10" />
@@ -70,7 +53,7 @@ const Hero = () => {
 
     const animate = () => {
       scrollLeft += speed;
-      if (scrollLeft >= container.scrollWidth / 2) {
+      if (scrollLeft >= container.scrollWidth - container.clientWidth) {
         scrollLeft = 0;
       }
       container.scrollLeft = scrollLeft;
@@ -101,42 +84,42 @@ const Hero = () => {
           <div className="overflow-hidden relative mt-6">
             <div
               ref={scrollRef}
-              className="flex overflow-x-scroll no-scrollbar whitespace-nowrap"
-              style={{ scrollBehavior: 'auto' }}
+              className="flex no-scrollbar whitespace-nowrap"
+              style={{ scrollBehavior: 'auto', width: '100%', overflowX: 'auto' }}
             >
-              {[...images, ...images].map((image, index) => (
-                <img
-                  key={`loop-${index}`}
-                  src={image}
-                  alt={`Bomba de Vacío ${index}`}
-                  className="h-36 w-36 mx-6 inline-block"
-                />
+              {images.map((image, index) => (
+                <div key={`logo-${index}`} className="flex-shrink-0 basis-1/5 px-2">
+                  <img
+                    src={image}
+                    alt={`Bomba de Vacío ${index}`}
+                    className="h-36 w-full object-contain"
+                  />
+                </div>
               ))}
             </div>
           </div>
 
           {/* Botones */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-           <Button
-  size="lg"
-  className="bg-primary hover:bg-red text-white glow-effect group"
-  aria-label="Solicitar cotización"
-  onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
->
-  Solicitar Cotización
-  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-</Button>
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-red text-white glow-effect group"
+              aria-label="Solicitar cotización"
+              onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Solicitar Cotización
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Button>
 
-<Button
-  size="lg"
-  variant="outline"
-  className="border-primary text-black hover:bg-white"
-  aria-label="Conocer más sobre nosotros"
-  onClick={() => document.querySelector('#nosotros')?.scrollIntoView({ behavior: 'smooth' })}
->
-  Conocer Más
-</Button>
-
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-black hover:bg-white"
+              aria-label="Conocer más sobre nosotros"
+              onClick={() => document.querySelector('#nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Conocer Más
+            </Button>
           </div>
         </div>
       </div>

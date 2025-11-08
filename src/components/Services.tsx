@@ -19,7 +19,6 @@ const Services = () => {
       description: "Soluciones integrales para sistemas de vacío industriales.",
       extraDescription:
         "Sistemas de vacío completos con accesorios como vacuómetros digitales, mangueras metálicas de 3, 4 y 6 pulgadas, válvulas reductoras, empaques compatibles con aceite dieléctrico y tornillería especializada.",
-      video: "https://www.pexels.com/es-es/download/video/30243438/",
       features:[
   "🏗️ Venta de equipos nuevos y reconstruidos.",
   "🛠️ Reparación, reconstrucción y mantenimiento.",
@@ -56,7 +55,6 @@ const Services = () => {
         "Eliminación de gases como nitrógeno, oxígeno, monóxido y bióxido de carbono, humedad, sin que el aceite regenerado pierda sus propiedades.",
       extraDescription:
         "En un solo paso usted puede eliminar de 2,800 a 1 partícula entre 5–10 micrones. Conoce nuestros casos de éxito.",
-      video: "https://www.pexels.com/download/video/30243438/",
       features: [
   "🏭 Venta de equipos nuevos y reconstruidos, reconstrucción, mantenimiento y reparación de sistemas de tratamiento de aceite.",
   "🧪 Servicio de filtrado y desgasificación en sus instalaciones.",
@@ -97,7 +95,6 @@ const Services = () => {
         "Servicio de secado de tanques e intercambiadores de calor, secado de transformadores al vacío, renta de sistemas de vacío completos para secado de transformador.",
       extraDescription:
         "Sistemas de filtración con alta eficiencia para aceites dieléctricos, líquidos hidráulicos y transformadores, con accesorios modulares para fácil integración.",
-      video: "https://www.pexels.com/download/video/10058364/",
       features: [
   "💧 Secado de tanques e intercambiadores de calor o cualquier otro con agua, por prueba hidrostática.",
   "⚡ Secado de transformadores al vacío nuevos y reparados con equipos de menos de 100 micrones.",
@@ -127,7 +124,6 @@ const Services = () => {
         "Detectores de fuga líquidos, pruebas de hermeticidad de transformadores, reparación de desgasificadoras, repuestos y accesorios para equipos de vacío.",
       extraDescription:
         "Detección de fugas para varios gases tales como: gases refrigerantes, gas helio, por sniffing (dentro del tanque, cámara o tubería), por evacuación o vacío. Además contamos con detectores de fuga líquido de marca propia, probados en nuestros sistemas y servicios en otras instalaciones.",
-      video: "https://www.pexels.com/download/video/4404095/",
       features: [
   "🕵️‍♂️ Detectores de fuga líquidos.",
   "🏗️ Construcción de metalizadoras.",
@@ -198,119 +194,117 @@ return (
         </div>
       </div>
     )}
+{services.map((service, index) => {
+  const currentImageIndex = imageIndices[index];
+  const imageId = `imagen-${service.id}`;
 
-    {services.map((service, index) => {
-      const currentImageIndex = imageIndices[index];
-      const imageId = `imagen-${service.id}`;
+  return (
+    <div
+      key={service.id}
+      id={service.id}
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+    >
+      {/* 🎥 Video de fondo local optimizado */}
+      <video
+        src="/videos/video2-final.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        aria-hidden="true"
+        tabIndex={-1}
+        title="Video de fondo ilustrativo optimizado"
+      />
 
-      return (
-        <div
-          key={service.id}
-          id={service.id}
-          className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-        >
-          {/* 🎥 Video de fondo */}
-          {service.video && (
-            <video
-              src={service.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="none"
-              className="absolute inset-0 w-full h-full object-cover z-0"
-              aria-hidden="true"
-              tabIndex={-1}
-              title="Video de fondo ilustrativo"
-            />
-          )}
+      {/* 🧊 Overlay oscuro */}
+      <div className="absolute inset-0 bg-black/75 z-10" />
 
-          {/* 🧊 Overlay oscuro */}
-          <div className="absolute inset-0 bg-black/75 z-10" />
+      {/* 🧱 Contenido principal */}
+      <div className="container mx-auto px-4 z-20 py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
+          {/* 🖼️ Galería sin tarjeta */}
+          <div className="flex flex-col items-center justify-center space-y-4">
+            <h2 className="text-4xl text-[#ED213A] text-center">Galería</h2>
 
-          {/* 🧱 Contenido principal */}
-          <div className="container mx-auto px-4 z-20 py-6">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-6 items-stretch">
-              {/* 🖼️ Galería sin tarjeta */}
-              <div className="flex flex-col items-center justify-center space-y-4">
-                <h2 className="text-4xl text-[#ED213A] text-center">Galería</h2>
+            {service.images.length > 0 && (
+              <div className="flex items-center justify-center gap-2">
+                <button
+                  onClick={() => updateImageIndex(index, "prev")}
+                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                  aria-label="Imagen anterior"
+                  aria-controls={imageId}
+                >
+                  <span className="text-2xl font-bold">‹</span>
+                </button>
 
-                {service.images.length > 0 && (
-                  <div className="flex items-center justify-center gap-2">
-                    <button
-                      onClick={() => updateImageIndex(index, "prev")}
-                      className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
-                      aria-label="Imagen anterior"
-                      aria-controls={imageId}
-                    >
-                      <span className="text-2xl font-bold">‹</span>
-                    </button>
+                <img
+                  id={imageId}
+                  src={service.images[currentImageIndex].src}
+                  alt={service.images[currentImageIndex].caption}
+                  width={440}
+                  height={440}
+                  loading="lazy"
+                  className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
+                  onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
+                />
 
-                    <img
-                      id={imageId}
-                      src={service.images[currentImageIndex].src}
-                      alt={service.images[currentImageIndex].caption}
-                      width={440}
-                      height={440}
-                      className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
-                      onClick={() => setZoomSrc(service.images[currentImageIndex].src)}
-                    />
+                <button
+                  onClick={() => updateImageIndex(index, "next")}
+                  className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
+                  aria-label="Imagen siguiente"
+                  aria-controls={imageId}
+                >
+                  <span className="text-2xl font-bold">›</span>
+                </button>
+              </div>
+            )}
 
-                    <button
-                      onClick={() => updateImageIndex(index, "next")}
-                      className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
-                      aria-label="Imagen siguiente"
-                      aria-controls={imageId}
-                    >
-                      <span className="text-2xl font-bold">›</span>
-                    </button>
-                  </div>
-                )}
+            {service.images.length > 0 && (
+              <p
+                className="italic text-xl text-center mt-0 text-white"
+                aria-live="polite"
+              >
+                {service.images[currentImageIndex].caption}
+              </p>
+            )}
+          </div>
 
-                {service.images.length > 0 && (
-                  <p
-                    className="italic text-xl text-center mt-0 text-white"
-                    aria-live="polite"
-                  >
-                    {service.images[currentImageIndex].caption}
-                  </p>
-                )}
+          {/* 📄 Tarjeta de texto compacta y limpia */}
+          <Card className="mt-12 h-full max-h-[520px] bg-white/80 backdrop-blur-sm border-white/30 flex flex-col">
+            <CardHeader className="text-black space-y-2">
+              <h1 className="text-4xl font-bold text-[#ED213A] text-center lg:text-left">
+                {service.title}
+              </h1>
+              <h2 className="text-2xl font-semibold leading-snug">
+                {service.description}
+              </h2>
+              <h3 className="text-xl font-semibold">Servicios disponibles</h3>
+            </CardHeader>
+
+            <CardContent className="text-black pb-4">
+              <div className="space-y-1 text-base">
+                {service.features.map((feature, idx) => (
+                  <div key={idx}>{feature}</div>
+                ))}
               </div>
 
-              {/* 📄 Tarjeta de texto compacta y limpia */}
-              <Card className="mt-12 h-full max-h-[520px] bg-white/80 backdrop-blur-sm border-white/30 flex flex-col">
-                <CardHeader className="text-black space-y-2">
-                  <h1 className="text-4xl font-bold text-[#ED213A] text-center lg:text-left">
-                    {service.title}
-                  </h1>
-                  <h2 className="text-2xl font-semibold leading-snug">
-                    {service.description}
-                  </h2>
-                  <h3 className="text-xl font-semibold">
-                    Servicios disponibles
-                  </h3>
-                </CardHeader>
-
-                <CardContent className="text-black pb-4">
-                  <div className="space-y-1 text-base">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx}>{feature}</div>
-                    ))}
-                  </div>
-
-                  <div className="mt-3 space-y-1">
-                    <h4 className="text-lg font-semibold">Nota:</h4>
-                    <p className="text-[1rem] leading-relaxed">
-                      {service.extraDescription}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+              <div className="mt-3 space-y-1">
+                <h4 className="text-lg font-semibold">Nota:</h4>
+                <p className="text-[1rem] leading-relaxed">
+                  {service.extraDescription}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
-      );
-    })}
+      </div>
+    </div>
+  );
+})}
+
+
   </section>
 );
 };  

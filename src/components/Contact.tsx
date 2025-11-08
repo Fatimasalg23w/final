@@ -101,16 +101,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="rounded-xl overflow-hidden border border-border h-60 md:h-100">
-              <iframe
-                src="https://www.bing.com/maps/embed?h=400&w=500&cp=19.558160~-98.885101&lvl=11&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
-                width="100%"
-                height="100%"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
-            </div>
+            
           </div>
 
           {/* Contact Form */}
@@ -183,7 +174,9 @@ const Contact = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary-glow text-black glow-effect"
+                className="w-full bg-primary hover:bg-primary-glow text-white glow-effect"
+
+
               >
                 Enviar Mensaje
                 <Send className="ml-2 h-5 w-5" />

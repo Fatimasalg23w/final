@@ -20,17 +20,19 @@
     <meta name="twitter:site" content="@lovable_dev" />
     <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
 
-    <!-- ✅ Preconnect solo a fuentes necesarias -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- ✅ Fuente Inter desde Google Fonts con font-display: swap -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-
     <!-- ✅ Favicon optimizado -->
     <link rel="icon" type="image/svg+xml" href="/logo.svg" />
 
-    <!-- ✅ Evita render blocking -->
+    <!-- ✅ Preload fuentes subseteadas -->
+    <link rel="preload" href="/assets/fonts/Inter-Regular-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Inter-Medium-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Inter-SemiBold-subset.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/Inter-Bold-subset.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- ✅ Evita render blocking de CSS -->
+    <link rel="stylesheet" href="/assets/index.css" media="print" onload="this.media='all'">
+
+    <!-- ✅ Estilos base -->
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -42,7 +44,6 @@
 
   <body>
     <div id="root"></div>
-    <!-- ✅ Vite insertará los scripts y CSS aquí automáticamente -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

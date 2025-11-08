@@ -26,8 +26,18 @@ app.use(
   })
 );
 
-// ✅ Fallback para SPA compatible con Node.js v22+
-app.get(/^\/(?!assets\/|logo\.svg$).*/, (req, res) => {
+// ✅ Servir blog desde vacioblog/dist/
+app.use(
+  "/blog",
+  express.static(path.join(__dirname, "vacioblog", "dist"), {
+    maxAge: 0,
+    etag: false,
+    lastModified: false,
+  })
+);
+
+// ✅ Fallback para SPA (excluye /blog)
+app.get(/^\/(?!assets\/|logo\.svg$|blog\/).*/, (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
