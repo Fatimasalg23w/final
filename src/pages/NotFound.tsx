@@ -1,3 +1,10 @@
+import { Helmet } from "react-helmet";
+
+<Helmet>
+  <title>Bombas Leybold | Vacío industrial</title>
+  <meta name="description" content="Bombas Leybold para vacío industrial. Alta eficiencia y durabilidad." />
+  <meta property="og:image" content="/webp/leybold.webp" />
+</Helmet>
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 

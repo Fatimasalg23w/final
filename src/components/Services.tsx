@@ -147,7 +147,7 @@ const Services = () => {
       ],
     },
   ];
-  const [zoomSrc, setZoomSrc] = useState<string | null>(null);
+ const [zoomSrc, setZoomSrc] = useState<string | null>(null);
 const [imageIndices, setImageIndices] = useState<number[]>(
   Array(services.length).fill(0)
 );
@@ -161,10 +161,25 @@ useEffect(() => {
   return () => window.removeEventListener("keydown", handleKeyDown);
 }, []);
 
+const updateImageIndex = (serviceIndex: number, direction: "next" | "prev") => {
+  const total = services[serviceIndex].images.length;
+  const newIndices = [...imageIndices];
+  newIndices[serviceIndex] =
+    direction === "next"
+      ? (newIndices[serviceIndex] + 1) % total
+      : (newIndices[serviceIndex] - 1 + total) % total;
+  setImageIndices(newIndices);
+};
+
 return (
   <section className="py-0">
     {zoomSrc && (
-      <div className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center">
+      <div
+        className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Imagen ampliada"
+      >
         <div className="relative max-w-[90vw] max-h-[90vh] bg-black rounded-lg flex items-center justify-center p-4">
           <button
             onClick={() => setZoomSrc(null)}
@@ -176,10 +191,9 @@ return (
           <img
             src={zoomSrc}
             alt="Imagen ampliada"
-            className="w-auto h-auto max-w-[100vw] max-h-[100vh] object-contain z-[105] rounded-lg shadow-lg"
-            loading="eager"
             width={800}
             height={600}
+            className="w-auto h-auto max-w-[100vw] max-h-[100vh] object-contain z-[105] rounded-lg shadow-lg"
           />
         </div>
       </div>
@@ -187,22 +201,7 @@ return (
 
     {services.map((service, index) => {
       const currentImageIndex = imageIndices[index];
-
-      const handlePrev = () => {
-        const newIndices = [...imageIndices];
-        newIndices[index] =
-          (newIndices[index] - 1 + service.images.length) % service.images.length;
-        setImageIndices(newIndices);
-      };
-
-      const handleNext = () => {
-        const newIndices = [...imageIndices];
-        const totalImages = service.images?.length || 0;
-        newIndices[index] = totalImages > 0
-          ? (newIndices[index] + 1) % totalImages
-          : 0;
-        setImageIndices(newIndices);
-      };
+      const imageId = `imagen-${service.id}`;
 
       return (
         <div
@@ -211,21 +210,20 @@ return (
           className="relative min-h-screen flex flex-col justify-center overflow-hidden"
         >
           {/* 🎥 Video de fondo */}
-{service.video && (
-  <video
-    src={service.video}
-    autoPlay
-    muted
-    loop
-    playsInline
-    preload="none"
-    className="absolute inset-0 w-full h-full object-cover z-0"
-    aria-hidden="true"
-    tabIndex={-1}
-    title="Video de fondo ilustrativo"
-  />
-)}
-
+          {service.video && (
+            <video
+              src={service.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+              className="absolute inset-0 w-full h-full object-cover z-0"
+              aria-hidden="true"
+              tabIndex={-1}
+              title="Video de fondo ilustrativo"
+            />
+          )}
 
           {/* 🧊 Overlay oscuro */}
           <div className="absolute inset-0 bg-black/75 z-10" />
@@ -240,17 +238,18 @@ return (
                 {service.images.length > 0 && (
                   <div className="flex items-center justify-center gap-2">
                     <button
-                      onClick={handlePrev}
+                      onClick={() => updateImageIndex(index, "prev")}
                       className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
                       aria-label="Imagen anterior"
+                      aria-controls={imageId}
                     >
                       <span className="text-2xl font-bold">‹</span>
                     </button>
 
                     <img
+                      id={imageId}
                       src={service.images[currentImageIndex].src}
                       alt={service.images[currentImageIndex].caption}
-                      loading="lazy"
                       width={440}
                       height={440}
                       className="w-[440px] h-[440px] object-cover rounded-lg cursor-zoom-in"
@@ -258,9 +257,10 @@ return (
                     />
 
                     <button
-                      onClick={handleNext}
+                      onClick={() => updateImageIndex(index, "next")}
                       className="w-9 h-9 bg-[#ED213A] text-white hover:bg-white hover:text-[#ED213A] rounded-full flex items-center justify-center transition"
                       aria-label="Imagen siguiente"
+                      aria-controls={imageId}
                     >
                       <span className="text-2xl font-bold">›</span>
                     </button>
@@ -268,7 +268,10 @@ return (
                 )}
 
                 {service.images.length > 0 && (
-                  <p className="italic text-xl text-center mt-0 text-white">
+                  <p
+                    className="italic text-xl text-center mt-0 text-white"
+                    aria-live="polite"
+                  >
                     {service.images[currentImageIndex].caption}
                   </p>
                 )}
@@ -309,6 +312,6 @@ return (
       );
     })}
   </section>
-);    
-};
+);
+};  
 export default Services;

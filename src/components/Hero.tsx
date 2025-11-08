@@ -117,22 +117,26 @@ const Hero = () => {
 
           {/* Botones */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-red text-white glow-effect group"
-              onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Solicitar Cotización
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-black hover:bg-white"
-              onClick={() => document.querySelector('#nosotros')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Conocer Más
-            </Button>
+           <Button
+  size="lg"
+  className="bg-primary hover:bg-red text-white glow-effect group"
+  aria-label="Solicitar cotización"
+  onClick={() => document.querySelector('#contacto')?.scrollIntoView({ behavior: 'smooth' })}
+>
+  Solicitar Cotización
+  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+</Button>
+
+<Button
+  size="lg"
+  variant="outline"
+  className="border-primary text-black hover:bg-white"
+  aria-label="Conocer más sobre nosotros"
+  onClick={() => document.querySelector('#nosotros')?.scrollIntoView({ behavior: 'smooth' })}
+>
+  Conocer Más
+</Button>
+
           </div>
         </div>
       </div>
